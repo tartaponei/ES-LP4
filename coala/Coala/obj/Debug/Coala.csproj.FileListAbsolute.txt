@@ -1,0 +1,13 @@
+c:\users\alunoct\documents\visual studio 2013\Projects\Coala\Coala\bin\Debug\Coala.exe.config
+C:\Users\alunoct\Desktop\Coala\Coala\bin\Debug\Coala.exe.config
+C:\Users\alunoct\Desktop\Coala\Coala\obj\Debug\Coala.csprojResolveAssemblyReference.cache
+C:\Users\alunoct\Desktop\Coala\Coala\obj\Debug\Coala.Form1.resources
+C:\Users\alunoct\Desktop\Coala\Coala\obj\Debug\Coala.Properties.Resources.resources
+C:\Users\alunoct\Desktop\Coala\Coala\obj\Debug\Coala.csproj.GenerateResource.Cache
+C:\Users\alunoct\Desktop\Coala\Coala\bin\Debug\Coala.exe
+C:\Users\alunoct\Desktop\Coala\Coala\bin\Debug\Coala.pdb
+C:\Users\alunoct\Desktop\Coala\Coala\obj\Debug\Coala.exe
+C:\Users\alunoct\Desktop\Coala\Coala\obj\Debug\Coala.pdb
+D:\coala\Coala\bin\Debug\Coala.exe.config
+D:\coala\Coala\obj\Debug\Coala.exe
+D:\coala\Coala\obj\Debug\Coala.pdb
