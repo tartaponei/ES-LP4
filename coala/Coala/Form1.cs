@@ -36,5 +36,23 @@ namespace Coala
 
             dlg.Dispose();
         }
+
+        private void NovoClick(object sender, EventArgs e)
+        {
+            Random r = new Random();
+            DataGridViewRow row = (DataGridViewRow)dG.Rows[0].Clone();
+            row.Cells[0].Value = r.Next(1, 8000);
+            row.Cells[1].Value = txtNome.Text;
+            row.Cells[2].Value = txtSobrenome.Text;
+            row.Cells[3].Value = txtCidade.Text;
+            row.Cells[4].Value = txtEstado.Text;
+            row.Cells[5].Value = txtNasc.Text;
+            row.Cells[6].Value = txtEmail.Text;
+            dG.Rows.Add(row);
+
+        private void ClickDel(object sender, EventArgs e)
+        {
+
+        }
     }
 }

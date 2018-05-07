@@ -29,9 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dG = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
@@ -50,50 +56,44 @@
             this.btnAvanca2 = new System.Windows.Forms.Button();
             this.btnAvanca1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.btnCarregarDados = new System.Windows.Forms.Button();
-            this.btnLocalizar = new System.Windows.Forms.Button();
-            this.btnDeletar = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.btnAlteraImagem = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button7 = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnCarregarDados = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnLocalizar = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.novoBtn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAlteraImagem = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dG)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dG);
             this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.txtEmail);
@@ -115,11 +115,11 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // dataGridView1
+            // dG
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dG.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.nome,
             this.sobrenome,
@@ -127,10 +127,52 @@
             this.estado,
             this.nascimento,
             this.email});
-            this.dataGridView1.Location = new System.Drawing.Point(9, 196);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(686, 219);
-            this.dataGridView1.TabIndex = 15;
+            this.dG.Location = new System.Drawing.Point(9, 196);
+            this.dG.Name = "dG";
+            this.dG.Size = new System.Drawing.Size(686, 219);
+            this.dG.TabIndex = 15;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Width = 60;
+            // 
+            // nome
+            // 
+            this.nome.HeaderText = "nome";
+            this.nome.Name = "nome";
+            this.nome.Width = 91;
+            // 
+            // sobrenome
+            // 
+            this.sobrenome.HeaderText = "sobrenome";
+            this.sobrenome.Name = "sobrenome";
+            this.sobrenome.Width = 91;
+            // 
+            // cidade
+            // 
+            this.cidade.HeaderText = "cidade";
+            this.cidade.Name = "cidade";
+            this.cidade.Width = 91;
+            // 
+            // estado
+            // 
+            this.estado.HeaderText = "estado";
+            this.estado.Name = "estado";
+            this.estado.Width = 91;
+            // 
+            // nascimento
+            // 
+            this.nascimento.HeaderText = "nascimento";
+            this.nascimento.Name = "nascimento";
+            this.nascimento.Width = 91;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "email";
+            this.email.Name = "email";
+            this.email.Width = 126;
             // 
             // txtCodigo
             // 
@@ -140,16 +182,6 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(25, 13);
             this.txtCodigo.TabIndex = 14;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Coala.Properties.Resources.foto01_coalas_600x450;
-            this.pictureBox1.Location = new System.Drawing.Point(517, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(175, 157);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
             // 
             // txtEmail
             // 
@@ -259,9 +291,9 @@
             // btnVolta1
             // 
             this.btnVolta1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolta1.Location = new System.Drawing.Point(310, 450);
+            this.btnVolta1.Location = new System.Drawing.Point(304, 450);
             this.btnVolta1.Name = "btnVolta1";
-            this.btnVolta1.Size = new System.Drawing.Size(67, 32);
+            this.btnVolta1.Size = new System.Drawing.Size(78, 32);
             this.btnVolta1.TabIndex = 1;
             this.btnVolta1.Text = "|<";
             this.btnVolta1.UseVisualStyleBackColor = true;
@@ -269,9 +301,9 @@
             // btnVolta2
             // 
             this.btnVolta2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolta2.Location = new System.Drawing.Point(383, 450);
+            this.btnVolta2.Location = new System.Drawing.Point(380, 450);
             this.btnVolta2.Name = "btnVolta2";
-            this.btnVolta2.Size = new System.Drawing.Size(67, 32);
+            this.btnVolta2.Size = new System.Drawing.Size(79, 32);
             this.btnVolta2.TabIndex = 2;
             this.btnVolta2.Text = "<";
             this.btnVolta2.UseVisualStyleBackColor = true;
@@ -279,9 +311,9 @@
             // btnAvanca2
             // 
             this.btnAvanca2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAvanca2.Location = new System.Drawing.Point(456, 450);
+            this.btnAvanca2.Location = new System.Drawing.Point(457, 450);
             this.btnAvanca2.Name = "btnAvanca2";
-            this.btnAvanca2.Size = new System.Drawing.Size(67, 32);
+            this.btnAvanca2.Size = new System.Drawing.Size(79, 32);
             this.btnAvanca2.TabIndex = 3;
             this.btnAvanca2.Text = ">";
             this.btnAvanca2.UseVisualStyleBackColor = true;
@@ -289,9 +321,9 @@
             // btnAvanca1
             // 
             this.btnAvanca1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAvanca1.Location = new System.Drawing.Point(529, 450);
+            this.btnAvanca1.Location = new System.Drawing.Point(531, 450);
             this.btnAvanca1.Name = "btnAvanca1";
-            this.btnAvanca1.Size = new System.Drawing.Size(67, 32);
+            this.btnAvanca1.Size = new System.Drawing.Size(79, 32);
             this.btnAvanca1.TabIndex = 4;
             this.btnAvanca1.Text = ">|";
             this.btnAvanca1.UseVisualStyleBackColor = true;
@@ -307,13 +339,13 @@
             this.groupBox2.Controls.Add(this.button12);
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.btnLocalizar);
-            this.groupBox2.Controls.Add(this.button11);
+            this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.btnDeletar);
             this.groupBox2.Controls.Add(this.button10);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.btnAlterar);
-            this.groupBox2.Controls.Add(this.button9);
+            this.groupBox2.Controls.Add(this.novoBtn);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.btnNovo);
             this.groupBox2.Controls.Add(this.button8);
@@ -328,6 +360,26 @@
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
+            // button14
+            // 
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.Location = new System.Drawing.Point(19, 378);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(121, 32);
+            this.button14.TabIndex = 22;
+            this.button14.Text = "Sair";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(19, 378);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(121, 32);
+            this.button7.TabIndex = 22;
+            this.button7.Text = "Sair";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -337,6 +389,26 @@
             this.btnSair.TabIndex = 22;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(19, 340);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(121, 32);
+            this.button13.TabIndex = 21;
+            this.button13.Text = "Carregar Dados";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(19, 340);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(121, 32);
+            this.button6.TabIndex = 21;
+            this.button6.Text = "Carregar Dados";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // btnCarregarDados
             // 
@@ -348,6 +420,26 @@
             this.btnCarregarDados.Text = "Carregar Dados";
             this.btnCarregarDados.UseVisualStyleBackColor = true;
             // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Location = new System.Drawing.Point(19, 302);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(121, 32);
+            this.button12.TabIndex = 20;
+            this.button12.Text = "Localizar";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(19, 302);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(121, 32);
+            this.button5.TabIndex = 20;
+            this.button5.Text = "Localizar";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // btnLocalizar
             // 
             this.btnLocalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -358,102 +450,16 @@
             this.btnLocalizar.Text = "Localizar";
             this.btnLocalizar.UseVisualStyleBackColor = true;
             // 
-            // btnDeletar
+            // btnDelete
             // 
-            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletar.Location = new System.Drawing.Point(19, 264);
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(121, 32);
-            this.btnDeletar.TabIndex = 19;
-            this.btnDeletar.Text = "Deletar";
-            this.btnDeletar.UseVisualStyleBackColor = true;
-            this.btnDeletar.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Location = new System.Drawing.Point(19, 224);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(121, 32);
-            this.btnAlterar.TabIndex = 18;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.Location = new System.Drawing.Point(19, 186);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(121, 32);
-            this.btnNovo.TabIndex = 17;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            // 
-            // btnAlteraImagem
-            // 
-            this.btnAlteraImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlteraImagem.Location = new System.Drawing.Point(19, 148);
-            this.btnAlteraImagem.Name = "btnAlteraImagem";
-            this.btnAlteraImagem.Size = new System.Drawing.Size(121, 32);
-            this.btnAlteraImagem.TabIndex = 6;
-            this.btnAlteraImagem.Text = "Alterar Imagem";
-            this.btnAlteraImagem.UseVisualStyleBackColor = true;
-            this.btnAlteraImagem.Click += new System.EventHandler(this.btnAlteraImagem_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Coala.Properties.Resources.gucci_vector_logo_768x768;
-            this.pictureBox2.Location = new System.Drawing.Point(29, 39);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(99, 86);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Coala.Properties.Resources.gucci_vector_logo_768x768;
-            this.pictureBox3.Location = new System.Drawing.Point(29, 39);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(99, 86);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(19, 148);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 32);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Alterar Imagem";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnAlteraImagem_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(19, 186);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 32);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Novo";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(19, 224);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 32);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Alterar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(19, 264);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(121, 32);
+            this.btnDelete.TabIndex = 19;
+            this.btnDelete.Text = "Deletar";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.ClickDel);
             // 
             // button4
             // 
@@ -466,45 +472,77 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button5
+            // btnDeletar
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(19, 302);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(121, 32);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "Localizar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.Location = new System.Drawing.Point(19, 264);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(121, 32);
+            this.btnDeletar.TabIndex = 19;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button6
+            // button10
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(19, 340);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(121, 32);
-            this.button6.TabIndex = 21;
-            this.button6.Text = "Carregar Dados";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(19, 224);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(121, 32);
+            this.button10.TabIndex = 18;
+            this.button10.Text = "Alterar";
+            this.button10.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // button3
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(19, 378);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(121, 32);
-            this.button7.TabIndex = 22;
-            this.button7.Text = "Sair";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(19, 224);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(121, 32);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Alterar";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // pictureBox4
+            // btnAlterar
             // 
-            this.pictureBox4.Image = global::Coala.Properties.Resources.gucci_vector_logo_768x768;
-            this.pictureBox4.Location = new System.Drawing.Point(29, 39);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(99, 86);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.Location = new System.Drawing.Point(19, 224);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(121, 32);
+            this.btnAlterar.TabIndex = 18;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            // 
+            // novoBtn
+            // 
+            this.novoBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.novoBtn.Location = new System.Drawing.Point(19, 186);
+            this.novoBtn.Name = "novoBtn";
+            this.novoBtn.Size = new System.Drawing.Size(121, 32);
+            this.novoBtn.TabIndex = 17;
+            this.novoBtn.Text = "Novo";
+            this.novoBtn.UseVisualStyleBackColor = true;
+            this.novoBtn.Click += new System.EventHandler(this.NovoClick);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(19, 186);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(121, 32);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Novo";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.Location = new System.Drawing.Point(19, 186);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(121, 32);
+            this.btnNovo.TabIndex = 17;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
@@ -517,108 +555,71 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.btnAlteraImagem_Click);
             // 
-            // button9
+            // button1
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(19, 186);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(121, 32);
-            this.button9.TabIndex = 17;
-            this.button9.Text = "Novo";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(19, 148);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 32);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Alterar Imagem";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnAlteraImagem_Click);
             // 
-            // button10
+            // btnAlteraImagem
             // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(19, 224);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(121, 32);
-            this.button10.TabIndex = 18;
-            this.button10.Text = "Alterar";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnAlteraImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlteraImagem.Location = new System.Drawing.Point(19, 148);
+            this.btnAlteraImagem.Name = "btnAlteraImagem";
+            this.btnAlteraImagem.Size = new System.Drawing.Size(121, 32);
+            this.btnAlteraImagem.TabIndex = 6;
+            this.btnAlteraImagem.Text = "Alterar Imagem";
+            this.btnAlteraImagem.UseVisualStyleBackColor = true;
+            this.btnAlteraImagem.Click += new System.EventHandler(this.btnAlteraImagem_Click);
             // 
-            // button11
+            // openFileDialog1
             // 
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(19, 264);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(121, 32);
-            this.button11.TabIndex = 19;
-            this.button11.Text = "Deletar";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button8_Click);
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button12
+            // pictureBox4
             // 
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(19, 302);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(121, 32);
-            this.button12.TabIndex = 20;
-            this.button12.Text = "Localizar";
-            this.button12.UseVisualStyleBackColor = true;
+            this.pictureBox4.Image = global::Coala.Properties.Resources.jin_eeee;
+            this.pictureBox4.Location = new System.Drawing.Point(29, 39);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(99, 86);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
             // 
-            // button13
+            // pictureBox3
             // 
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(19, 340);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(121, 32);
-            this.button13.TabIndex = 21;
-            this.button13.Text = "Carregar Dados";
-            this.button13.UseVisualStyleBackColor = true;
+            this.pictureBox3.Image = global::Coala.Properties.Resources.gucci_vector_logo_768x768;
+            this.pictureBox3.Location = new System.Drawing.Point(29, 39);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(99, 86);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
             // 
-            // button14
+            // pictureBox2
             // 
-            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(19, 378);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(121, 32);
-            this.button14.TabIndex = 22;
-            this.button14.Text = "Sair";
-            this.button14.UseVisualStyleBackColor = true;
+            this.pictureBox2.Image = global::Coala.Properties.Resources.gucci_vector_logo_768x768;
+            this.pictureBox2.Location = new System.Drawing.Point(29, 39);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(99, 86);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
             // 
-            // id
+            // pictureBox1
             // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.Width = 60;
-            // 
-            // nome
-            // 
-            this.nome.HeaderText = "nome";
-            this.nome.Name = "nome";
-            this.nome.Width = 91;
-            // 
-            // sobrenome
-            // 
-            this.sobrenome.HeaderText = "sobrenome";
-            this.sobrenome.Name = "sobrenome";
-            this.sobrenome.Width = 91;
-            // 
-            // cidade
-            // 
-            this.cidade.HeaderText = "cidade";
-            this.cidade.Name = "cidade";
-            this.cidade.Width = 91;
-            // 
-            // estado
-            // 
-            this.estado.HeaderText = "estado";
-            this.estado.Name = "estado";
-            this.estado.Width = 91;
-            // 
-            // nascimento
-            // 
-            this.nascimento.HeaderText = "nascimento";
-            this.nascimento.Name = "nascimento";
-            this.nascimento.Width = 91;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "email";
-            this.email.Name = "email";
-            this.email.Width = 126;
+            this.pictureBox1.Image = global::Coala.Properties.Resources.foto01_coalas_600x450;
+            this.pictureBox1.Location = new System.Drawing.Point(517, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(175, 157);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -636,12 +637,12 @@
             this.Text = "Cadastro de Contatos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dG)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -663,7 +664,7 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dG;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Button btnVolta1;
         private System.Windows.Forms.Button btnVolta2;
@@ -692,11 +693,11 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button novoBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button1;
