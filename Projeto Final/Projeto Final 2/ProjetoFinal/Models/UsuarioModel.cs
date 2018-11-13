@@ -17,6 +17,7 @@ namespace ProjetoFinal.Models
         public string Altura { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
+        public string Sexo { get; set; }
         public DateTime Data_nascimento { get; set; }
 
         public bool Autenticar()

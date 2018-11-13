@@ -12,7 +12,7 @@ namespace ProjetoFinal.Util
 
         private static string server = "localhost";
         private static string port = "3307";
-        private static string database = "financeiro";
+        private static string database = "projeto";
         private static string user = "root";
         private static string password = "root";
         private string connectionString = $"Server={server}; Port={port};Database{database}; Uid={user}; Pwd={password},SslMode=none";

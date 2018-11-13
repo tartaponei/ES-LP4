@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta charset="iso-8859-1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - projetofinal</title>
+    <title>@ViewData["Title"] - Projeto</title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -39,9 +40,8 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Corrida</a></li>
-                            <li><a href="#">Natação</a></li>
-                            <li><a href="#">Caminhada</a></li>
+                            <li><a href="~/images/aerobico.pdf">Aeróbicos</a></li>
+                            <li><a href="#">Anaeróbicos</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -50,14 +50,18 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="~/images/engorda.pdf" >Engorda</a></li>
+                            <li><a href="~/images/engorda.pdf">Engorda</a></li>
                             <li><a asp-area="" asp-controller="Usuario" asp-action="Emagrecimento">Emagrecimento</a></li>
                         </ul>
                     </li>
                 </ul>
+
+                @using Microsoft.AspNetCore.Http;
+                @inject IHttpContextAccessor HttpContextAccessor
+
                 <ul class="nav navbar-nav navbar-right">
-                <li><a asp-area="" asp-controller="Usuario" asp-action="CadastroUsuario">Cadastre-se!</a></li>
-                <li><a asp-area="" asp-controller="Usuario" asp-action="Login">Login</a></li>
+                    <li><a asp-area="" asp-controller="Usuario" asp-action="CadastroUsuario">Cadastre-se!</a></li>
+                    <li><a asp-area="" asp-controller="Usuario" asp-action="Login" id="log">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -92,5 +96,26 @@
     </environment>
 
     @RenderSection("Scripts", required: false)
+
+    <script>
+        function CarregarUsuarioLogado() {
+            var nome = '@HttpContextAccessor.HttpContext.Session.GetString("NomeUsuarioLogado")'
+
+            if (nome != "") {
+                var divNome = document.getElementById("NomeUsuarioLogado");
+                divNome.innerHTML = "Olá, " + nome;
+
+                var divLog = document.getElementById("log");
+                divLog.innerHTML = "Logoff" + "<a href='../Usuario/Login/0'> </a>";
+
+            }
+
+            else {
+                var divLog = document.getElementById("log");
+                divLog.innerHTML = "Login";
+            }
+
+        }
+    </script>
 </body>
 </html>
