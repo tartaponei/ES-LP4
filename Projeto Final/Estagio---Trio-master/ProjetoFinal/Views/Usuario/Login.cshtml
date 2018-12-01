@@ -1,0 +1,51 @@
+
+@{
+    Layout = "../Shared/_LayoutLogin.cshtml";
+}
+<center>
+    <h2>
+        Login
+    </h2>
+</center>
+
+<div class="container-fluid">
+    <div class="row menu">
+        <div class="col-lg-4">
+        </div>
+        @model UsuarioModel
+        <div class="col-lg-4">
+            @{
+                try
+                {
+                    if (TempData["MensagemLoginInvalido"].ToString() != "")
+                    {
+
+                        <div class="alert alert-danger">
+                            <strong>Atenção!</strong> @TempData["MensagemLoginInvalido"]
+                        </div>
+                    }
+                }
+                catch { }
+            }
+            <form asp-controller="Usuario" asp-action="Autenticar">
+                <div class="form-group">
+                    <label for="Email">Usuario</label>
+                    <input type="email" class="form-control" name="Email" asp-for="Email">
+                </div>
+                <div class="form-group">
+                    <label for="Senha">Senha:</label>
+                    <input type="password" class="form-control" name="Senha" asp-for="Senha">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Lembrar Acesso</label>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6"><a href="CadastroUsuario"><button type="button" class="btn btn-block btn-info">Novo Usuario</button></a></div>
+                    <div class="col-lg-6"><button type="submit" class="btn btn-block btn-success">Acessar Sistema</button></div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-4">
+        </div>
+    </div>
+</div>
