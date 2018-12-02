@@ -30,11 +30,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Mais Saúde</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                   
              
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -63,7 +62,7 @@
                 @using Microsoft.AspNetCore.Http;
                 @inject IHttpContextAccessor HttpContextAccessor
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a asp-area="" asp-controller="Usuario" asp-action="Index">Logoff</a></li>
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand"> Logoff</a>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             <i class="fa fa-cog" aria-hidden="true"></i>
@@ -72,6 +71,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="">Políticas de Privacidade</a></li>
                             <li><a href="">Excluir Conta</a></li>
+                            <li><a href="">Editar Conta</a></li>
                         </ul>
                     </li>
                 </ul>
