@@ -79,22 +79,13 @@ namespace ProjetoFinal.Controllers
                 return RedirectToAction("CadastroUsuario");
             }
         }
-       // public IActionResult Atualizar(UsuarioModel usuario)
-        //{
 
-         //   bool Atualizar = usuario.AtualizarDados();
-
-         //   if (Atualizar)
-        //    {
-        //        TempData["MensagemAtualizadoSucesso"] = "Dados Atualizados com sucesso!";
-        //        return RedirectToAction("UsuarioLogado");
-        //    }
-        //    else
-            
-         //       return RedirectToAction("UsuarioLogado");
-         //   }
+        IHttpContextAccessor HttpContextAccessor;
+        public UsuarioController(IHttpContextAccessor httpContextAccessor)
+        {
+            HttpContextAccessor = httpContextAccessor;
 
         }
-
     }
+ }
 

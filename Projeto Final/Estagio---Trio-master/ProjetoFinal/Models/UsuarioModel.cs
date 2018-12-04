@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Data;
 using ProjetoFinal.Util;
+using Microsoft.AspNetCore.Http;
 
 namespace ProjetoFinal.Models
 {
@@ -22,6 +23,8 @@ namespace ProjetoFinal.Models
         public float Pressao { get; set; }
         public float Nivel_glicemico { get; set; }
         public DateTime Data_Nascimento { get; set; }
+
+       
 
         public bool Autenticar()
         {
@@ -42,42 +45,16 @@ namespace ProjetoFinal.Models
             }
             return false;
         }
-
-
         public bool Cadastrar()
         {
-
-
-
             string sql = $"INSERT INTO CADASTRO(NOME,EMAIL,SENHA,CPF,ALTURA,PESO,SEXO,CONDICAO,DATA_NASCIMENTO,PRESSAO,NIVEL_GLICEMICO) VALUES ('{Nome}','{Email}','{Senha}','{Cpf}','{Altura}','{Peso}','{Sexo}','{Condicao}','{Data_Nascimento}','{Pressao}','{Nivel_glicemico}')";
             DAL objDAL = new DAL();
             objDAL.ExecutarComandoSql(sql);
             return true;
-
-
-
-
-        }
-        public bool AtualizarDados()
-       {
-
-
-
-           string sql = $"INSERT INTO PRESSAO(CPF,PRESSAO) VALUES ('{Cpf}','{Pressao}')";
-           DAL objDAL = new DAL();
-          objDAL.ExecutarComandoSql(sql);
-           return true;
-
-            // string sql = $"INSERT INTO NIVEL_GLICEMICO(CPF,NIVEL_GLICEMICO) VALUES ('{Cpf}','{Nivel_glicemico}')";
-            // DAL objDAL = new DAL();
-            // objDAL.ExecutarComandoSql(sql);      ! fazer um join para dar insert nas duas tabelas. pressao e nivel!
-            // return true;
-
-           // string sql = $"UPDATE Cadastro(ALTURA,PESO) SET ('{Altura}','{Peso}') WHERE='CPF'='{Cpf}'";
-           // DAL objDAL = new DAL();
-            //objDAL.ExecutarComandoSql(sql);    !calcular imc(observar se a linha de consulta esta certa!
-           // return true;
-        }
+        }  
+        public UsuarioModel()
+        {
+        }      
     }
 }
     
