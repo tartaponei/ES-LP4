@@ -47,7 +47,7 @@ namespace ProjetoFinal.Models
         }
         public bool Cadastrar()
         {
-            string sql = $"INSERT INTO CADASTRO(NOME,EMAIL,SENHA,CPF,ALTURA,PESO,SEXO,CONDICAO,DATA_NASCIMENTO,PRESSAO,NIVEL_GLICEMICO) VALUES ('{Nome}','{Email}','{Senha}','{Cpf}','{Altura}','{Peso}','{Sexo}','{Condicao}','{Data_Nascimento}','{Pressao}','{Nivel_glicemico}')";
+            string sql = $"INSERT INTO CADASTRO(NOME,EMAIL,SENHA,CPF,ALTURA,PESO,SEXO,CONDIÇÃO,DATA_NASCIMENTO VALUES ('{Nome}','{Email}','{Senha}','{Cpf}','{Altura}','{Peso}','{Sexo}','{Condicao}','{Data_Nascimento}')";
             DAL objDAL = new DAL();
             objDAL.ExecutarComandoSql(sql);
             return true;
