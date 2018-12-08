@@ -86,6 +86,48 @@ namespace ProjetoFinal.Controllers
             HttpContextAccessor = httpContextAccessor;
 
         }
+        public IActionResult ExercicioAerobico()
+        {
+            return View();
+
+        }
+        public IActionResult ExercicioAnaerobico()
+        {
+            return View();
+
+        }
+        public IActionResult DietaH()
+        {
+            return View();
+
+        }
+        public IActionResult DietaD()
+        {
+            return View();
+
+        }
+        public IActionResult CalcularIMC(UsuarioModel usuario)
+        {
+            ViewBag.abaixo = "Voce está abaixo do peso";
+            ViewBag.ideal = "Voce está no peso ideal";
+            ViewBag.acima = "Voce está acima do peso";
+            ViewBag.obeso = "Voce está obeso";
+            // double atualizar = usuario.CalcularIMC();
+
+            //if (atualizar!=0)
+            // {
+            //     TempData["MensagemCadastroSucesso"] = "Usuario cadastrado com sucesso!";
+            //     return RedirectToAction("UsuarioLogado");
+            // }
+            // else
+            // {
+            //     TempData["MensagemCadastroInvalido"] = "Usuario não cadastrado";
+            //     return RedirectToAction("UsuarioLogado");
+            // }
+
+            return RedirectToAction("UsuarioLogado");
+        }
+
     }
  }
 

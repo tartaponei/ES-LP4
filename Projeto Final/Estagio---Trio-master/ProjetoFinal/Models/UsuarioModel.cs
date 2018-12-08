@@ -15,8 +15,8 @@ namespace ProjetoFinal.Models
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
-        public int Cpf { get; set; }
-        public float Altura { get; set; }
+        public string Cpf { get; set; }
+        public double Altura { get; set; } 
         public float Peso { get; set; }
         public string Sexo { get; set; }
         public string Condicao { get; set; }
@@ -47,7 +47,7 @@ namespace ProjetoFinal.Models
         }
         public bool Cadastrar()
         {
-            string sql = $"INSERT INTO CADASTRO(NOME,EMAIL,SENHA,CPF,ALTURA,PESO,SEXO,CONDIÇÃO,DATA_NASCIMENTO VALUES ('{Nome}','{Email}','{Senha}','{Cpf}','{Altura}','{Peso}','{Sexo}','{Condicao}','{Data_Nascimento}')";
+            string sql = $"INSERT INTO CADASTRO(NOME,EMAIL,SENHA,CPF,ALTURA,PESO,SEXO,CONDIÇÃO,DATA_NASCIMENTO) VALUES ('{Nome}','{Email}','{Senha}','{Cpf}','{Altura}','{Peso}','{Sexo}','{Condicao}','{Data_Nascimento}')";
             DAL objDAL = new DAL();
             objDAL.ExecutarComandoSql(sql);
             return true;
@@ -55,6 +55,24 @@ namespace ProjetoFinal.Models
         public UsuarioModel()
         {
         }      
+
+        //public double CalcularIMC()
+        //{
+            //string sql = $"SELECT ALTURA, PESO FROM CADASTRO WHERE Id='{Id}'";
+            //DAL objDAO = new DAL();
+            //DataTable dt = objDAO.RetDataTable(sql);
+
+            
+            //if (dt != null)
+            //{
+                //if (dt.Rows.Count == 1)
+                //{
+                    //Altura = dt.Rows[0]["ALTURA"].ToString(); //dados para sessao
+                    //dt.Rows[0]["PESO"].ToString(); //dados para sessao
+                //}
+            //}
+            //return Peso / (Altura * Altura);
+        }
     }
-}
+//}
     

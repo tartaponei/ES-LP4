@@ -14,8 +14,8 @@ namespace ProjetoFinal.Models
 
        
 
-        public string Cpf { get; set; }
-        public float Pressao { get; set; }
+        public int Id { get; set; }
+        public Double Pressao { get; set; }
         public DateTime data_cadastro { get; set; }
 
 
@@ -35,7 +35,7 @@ namespace ProjetoFinal.Models
 
 
 
-            string sql = $"INSERT INTO PRESSAO(PRESSAO,DATA_CADASTRO) VALUES ('{Pressao}', '{data_cadastro}') WHERE CPF ='{Cpf}'";
+            string sql = $"INSERT INTO PRESSAO(PRESSAO,DATA_CADASTRO) VALUES ('{Pressao}', '{data_cadastro}') WHERE ID ='{Id}'";
             DAL objDAL = new DAL();
             objDAL.ExecutarComandoSql(sql);
             return true;
@@ -48,15 +48,15 @@ namespace ProjetoFinal.Models
             // pegar iddo usuario logado
 
             string id_usuario_logado = HttpContextAccessor.HttpContext.Session.GetString("IdUsuario");
-            string sql = $"SELECT PRESSAO FROM PRESSAO WHERE CPF='{Cpf}'";
+            string sql = $"SELECT PRESSAO FROM PRESSAO WHERE ID='{Id}'";
             DAL objDAO = new DAL();
             DataTable dt = objDAO.RetDataTable(sql);
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                item = new PressaoModel();
-               item.Cpf = (dt.Rows[i]["CPF"].ToString());
-               item.Pressao = int.Parse(dt.Rows[i]["NIVEL_GLICEMICO"].ToString());
+               item.Id = int.Parse(dt.Rows[i]["ID"].ToString());
+               item.Pressao = int.Parse(dt.Rows[i]["PRESSAO"].ToString());
                lista.Add(item);
 
             }

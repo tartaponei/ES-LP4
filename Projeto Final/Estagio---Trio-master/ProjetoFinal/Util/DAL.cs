@@ -1,9 +1,10 @@
-﻿using MySql.Data.MySqlClient;
+﻿
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace ProjetoFinal.Util
 {
@@ -12,8 +13,8 @@ namespace ProjetoFinal.Util
         private static string server = "localhost";
         private static string database = "projeto";
         private static string user = "root";
-        private static string password = "";
-        private string connectionString = $"Server={server};Port={3306};Database={database};Uid={user};Pwd={password};SslMode=none";
+        private static string password = "root";
+        private string connectionString = $"Server={server};Port=3307;Database={database};Uid={user};Pwd={password};SslMode=none";
         private MySqlConnection connection;
 
         public DAL()

@@ -59,17 +59,18 @@
             <label class="control-label col-sm-2" asp-for="Sexo"for="sexo">Sexo:</label>
             <div class="col-sm-offset-2 col-sm-4">
                 <div class="radio">
-                    <label><input type="radio" name="sexo" value="Feminino"> Feminino</label>
-                        <label><input type="radio" name="sexo" value="Masculino">Masculino</label>
+                    <label><input type="radio" name="sexo" value="F"> Feminino</label>
+                        <label><input type="radio" name="sexo" value="M">Masculino</label>
                 </div>
             </div>
             </div>
         <div class="col-sm-4">
-            <label class="control-label col-sm-2" for="diabetico">Condi&ccedil;&atilde;o:</label>
+            <label class="control-label col-sm-2" asp-for="Condicao" for="diabetico">Condi&ccedil;&atilde;o:</label>
             <div class="col-sm-offset-2 col-sm-4">
                 <div class="checkbox">
-                    <label><input type="checkbox" id="diabetico"  value="Diabetico"> Diab&eacute;tico</label>
-                    <label><input type="checkbox"  value="Hipertenso">Hipertenso</label>
+                    <label><input type="radio" name="condicao" value="D">Diab&eacute;tico</label>
+                    <label><input type="radio" name="condicao" value="H">Hipertenso</label>
+                    <label><input type="radio" name="condicao" value="P">Diab&eacute;tico e Hipertenso</label>
                 </div>
             </div>
         </div>

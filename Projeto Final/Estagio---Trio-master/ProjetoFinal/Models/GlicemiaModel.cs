@@ -10,32 +10,30 @@ namespace ProjetoFinal.Models
 {
     public class GlicemiaModel
     {
-        public string Cpf { get; set; }
-        public float Nivel_glicemico { get; set; }
-        public DateTime data_cadastro { get; set; }
-
-
-        IHttpContextAccessor HttpContextAccessor;
-
-        public GlicemiaModel(IHttpContextAccessor httpContextAccessor)
-        {
-            HttpContextAccessor = httpContextAccessor;
-        }
+        public int Id { get; set; }
+        public int Nivel_glicemico { get; set; }
+        public string Data_cadastro { get; set; }
+        public IHttpContextAccessor HttpContextAccessor { get; set; }
 
         public GlicemiaModel()
         {
         }
 
+        
+        public GlicemiaModel(IHttpContextAccessor httpContextAccessor)
+        {
+            HttpContextAccessor = httpContextAccessor;
+        }
+
         public bool InserirGlicemia()
         {
-
-
-
-            string sql = $"INSERT INTO NIVEL_GLICEMICO(NIVEL_GLICEMICO,DATA_CADASTRO) VALUES ('{Nivel_glicemico}', '{data_cadastro}') WHERE CPF ='{Cpf}'";
+            string id_usuario_logado = HttpContextAccessor.HttpContext.Session.GetString("IdUsuarioLogado");
+            string sql = $"INSERT INTO GLICEMIA(NIVEL_GLICEMICO,DATA_CADASTRO) VALUES ('{Nivel_glicemico}', '{Data_cadastro}') WHERE Id ='{id_usuario_logado}'";
             DAL objDAL = new DAL();
             objDAL.ExecutarComandoSql(sql);
             return true;
         }
+
         public List<GlicemiaModel> ListaGlicemia()
         {
             List<GlicemiaModel> lista = new List<GlicemiaModel>();
@@ -44,30 +42,26 @@ namespace ProjetoFinal.Models
             // pegar iddo usuario logado
 
             string id_usuario_logado = HttpContextAccessor.HttpContext.Session.GetString("IdUsuario");
-            string sql = $"SELECT CPF,Nivel_GLICEMICO FROM Nivel_Glicemico WHERE CPF='{Cpf}'";
+            string sql = $"SELECT ID,Nivel_GLICEMICO, DATA_CADASTRO FROM Nivel_Glicemico WHERE ID='{id_usuario_logado}'";
             DAL objDAO = new DAL();
             DataTable dt = objDAO.RetDataTable(sql);
 
             for (int i = 0; i < dt.Rows.Count; i++)
            {
                 item = new GlicemiaModel();
-                item.Cpf = (dt.Rows[i]["CPF"].ToString());
+               
                 item.Nivel_glicemico = int.Parse(dt.Rows[i]["NIVEL_GLICEMICO"].ToString());
                 lista.Add(item);
 
             }
             return lista;
         }
-        public void AtualizarDados()
+       
+        public void Excluir(int Id)
         {
-            string id_usuario_logado = HttpContextAccessor.HttpContext.Session.GetString("IdUsuarioLogado");
-            string sql = $"INSERT INTO NIVEL_GLICEMICO(NIVEL_GLICEMICO)VALUES( '{Nivel_glicemico}')";
-            DAL objDAO = new DAL();
-            objDAO.ExecutarComandoSql(sql);
+            new DAL().ExecutarComandoSql("DELETE FROM NIVEL_GLICEMICO WHERE Id=" + Id);
         }
-        public void Excluir(int Cpf)
-        {
-            new DAL().ExecutarComandoSql("DELETE FROM NIVEL_GLICEMICO WHERE CPF=" + Cpf);
-        }
+
+       
     }
-}
+ }

@@ -24,7 +24,7 @@ namespace ProjetoFinal.Controllers
 
         }
         [HttpPost]
-        public IActionResult Usuario(PressaoModel formulario)
+        public IActionResult Pressao(PressaoModel formulario)
         {
             if (ModelState.IsValid)
             {
