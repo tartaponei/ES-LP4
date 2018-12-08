@@ -1,0 +1,54 @@
+﻿
+<h3>Meus Dados</h3>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            
+            <th>ID</th>
+            <th>Data</th>
+            <th>Nivel glicemico</th>
+            <th>Pressao</th>
+           
+        </tr>
+    </thead>
+
+    @{
+        foreach (var item in (List<GraficoModel>)ViewBag.ListaGrafico)
+        {
+            <tbody>
+                <tr>
+                    <td><button type="button" class="btn btn-primary" onclick="Editar(@item.Id.ToString())">Editar</button></td>
+                    <td><button type="button" class="btn btn-danger" onclick="Excluir(@item.Id.ToString())">Excluir</button></td>
+                    <td>@item.Id.ToString()</td>
+                    <td>@item.Data_cadastroP.ToString()</td>
+                    <td>@item.Data_cadastroG.ToString()</td>
+                    <td>@item.Nivel_glicemico.ToString().Replace("H", "Hipertenso").Replace("D", "Diabetico")</td>
+                    
+                    <td>@item.Pressao.ToString()</td>
+                    
+
+                </tr>
+            </tbody>
+        }
+    }
+
+</table>
+
+<button type="button" class="btn btn-block btn-primary" onclick="Registrar()">Registrar Dados</button>
+
+<script>
+    function Registrar()
+    {
+        window.location.href = "../Grafico/Registrar";
+    }
+
+    function Excluirdados(id)
+    {
+        window.location.href = "../Grafico/Excluirdados/" + id;
+    }
+
+    function Editar(id) {
+        window.location.href = "../Grafico/Registrar/" + id;
+    }
+</script>

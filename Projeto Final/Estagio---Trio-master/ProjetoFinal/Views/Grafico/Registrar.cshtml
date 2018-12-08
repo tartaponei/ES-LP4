@@ -1,0 +1,110 @@
+﻿@model GraficoModel
+
+
+<h3>Registrar um novo dado</h3>
+
+@{
+    var vData = " ";
+    var vPressao = "";
+    var vNivel_glicemico = "";
+    var vValor = 0.0;
+    var vId = 0;
+    var vCondicao = " ";
+
+    try
+    {
+        vId = int.Parse(@ViewBag.Registro.Id.ToString());
+        vData = DateTime.Parse(@ViewBag.Registro.Data.ToString()).ToString("yyyy-MM-dd");
+        vPressao = int.Parse(@ViewBag.Registro.Conta_Id.ToString());
+        vNivel_glicemico = int.Parse(@ViewBag.Registro.Plano_Contas_Id.ToString());
+
+        vValor = double.Parse(@ViewBag.Registro.Valor.ToString());
+    }
+    catch { }
+}
+<form asp-controller="Grafico" asp-action="Registrar">
+    <input type="hidden" asp-for="Id" value="@vId" />
+
+    <div class="form-group">
+       
+    </div>
+
+    <div class="form-group">
+        <label>Condicao:</label>
+
+        @{
+            
+            if (vCondicao == "G")
+            {
+                <div class="radio"><label><input type="radio" asp-for="Condicao" value="G" checked>Nivel glicemico</label></div>
+                <div class="radio"><label><input type="radio" asp-for="Condicao" value="H" unchecked>Pressao</label></div>
+            }
+            else
+            {
+                <div class="radio"><label><input type="radio" asp-for="Condicao" value="G" unchecked>Nivel glicemico</label></div>
+                <div class="radio"><label><input type="radio" asp-for="Condicao" value="H" checked>Pressao</label></div>
+            }
+            if (vCondicao == "H")
+            {
+                <div class="radio"><label><input type="radio" asp-for="Condicao" value="H" checked>Nivel glicemico</label></div>
+                <div class="radio"><label><input type="radio" asp-for="Condicao" value="G" unchecked>Pressao</label></div>
+            }
+            else
+            {
+                <div class="radio"><label><input type="radio" asp-for="Condicao" value="H" unchecked>Nivel glicemico</label></div>
+                <div class="radio"><label><input type="radio" asp-for="Condicao" value="G" checked>Pressao</label></div>
+            }
+        }
+    </div>
+
+    <div class="form-group">
+        <label>Valor:</label>
+        <input type="number" class="form-control" asp-for="Valor" value="@vValor">
+        <span asp-validation-for="Valor" class="text-danger"></span>
+    </div>
+
+  
+
+    <div class="form-group">
+        <label>Glicemia:</label>
+        <select asp-for="Data_cadastroG" class="form-control">
+            @{
+               
+                foreach (var item in (List<GlicemiaModel>)ViewBag.ListaGlicemia)
+                {
+                    if (item.Id.ToString() == vData.ToString())
+                    {
+                        <option selected value="@item.Id.ToString()">@item.Nivel_glicemico.ToString()</option>
+                    }
+                    else
+                    {
+                        <option value="@item.Id.ToString()">@item.Nivel_glicemico.ToString()</option>
+                    }
+                }
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Pressao:</label>
+        <select asp-for="Id" class="form-control">
+            @{
+                foreach (var item in (List<PressaoModel>)ViewBag.ListaPressao)
+                {
+                    if (item.Id.ToString() == vId.ToString())
+                    {
+                        <option selected value="@item.Id.ToString()">@item.Pressao.ToString()</option>
+                    }
+                    else
+                    {
+                        <option value="@item.Id.ToString()">@item.Pressao.ToString()</option>
+
+                    }
+                }
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-block btn-success">Registrar</button>
+</form>
+

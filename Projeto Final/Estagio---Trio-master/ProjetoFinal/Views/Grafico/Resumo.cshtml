@@ -1,0 +1,62 @@
+﻿@model GraficoModel
+
+<h3>Meu Perfil</h3>
+
+<div class="container">
+    <form asp-controller="Tipo de dado" asp-action="Perfil">
+        <div class="form-group">
+            <label>Valor:</label>
+            <input type="text" asp-for="Valor" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Tipo Transação:</label>
+            <div class="radio"><label><input type="radio" asp-for="Nivel_glicemico" value="G" checked>Nivel glicemico</label></div>
+            <div class="radio"><label><input type="radio" asp-for="Pressao" value="H">Pressao</label></div>
+
+        </div>
+        <button type="submit" class="btn btn-block btn-success">Pesquisar</button>
+    </form>
+</div>
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nível Glicêmico</th>
+            <th>Pressão</th>
+            <th>Data</th>
+        </tr>
+    </thead>
+
+    @{
+        var data = DateTime.Now;
+        foreach (var item in (List<GraficoModel>)ViewBag.ListaGrafico)
+        {
+            <tbody>
+                <tr>
+
+                    <td> @item.Data_cadastroP=data</td>
+
+                    <td> @item.Data_cadastroG=data</td>
+
+                    <td><button type="button" class="btn btn-primary" onclick="Editar(@item.Id.ToString())">Editar</button></td>
+                    
+                    
+                    <td>@item.Condicao.ToString()</td>
+                    <td>R$ @item.Valor.ToString()</td>
+                   </tr>
+
+       
+            </tbody>
+
+            }
+        }
+
+</table>
+
+
+<script>
+    function Editar(id) {
+        window.location.href = "../Grafico/Registrar/" + id;
+    }
+</script>

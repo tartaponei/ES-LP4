@@ -1,0 +1,24 @@
+﻿<h3>Deseja Excluir o dado selecionada?</h3>
+
+<p><strong>ID:</strong> @ViewBag.Registro.Id.ToString()</p>
+<p><strong>Nivel glicemico:</strong> @ViewBag.Registro.Nivel_glicemico.ToString()</p>
+<p><strong>Pressao:</strong> @ViewBag.Registro.Pressao.ToString()</p>
+<p><strong>Data :</strong> @ViewBag.Registro.data_cadastroG.ToString()</p>
+<p><strong>Data :</strong> @ViewBag.Registro.data_cadastroP.ToString()</p>
+<p><strong>Codicao :</strong> @ViewBag.Registro.Valor.ToString()</p>
+
+
+<button type="button" onclick="Cancelar()" class="btn btn-block btn-default">Cancelar</button>
+<button type="button" onclick="Excluir(@ViewBag.Registro.Id.ToString())" class="btn btn-block btn-danger">Excluir</button>
+
+<script>
+    function Excluir(id) {
+        window.location.href = "../../Grafico/Excluir/" + id;
+    }
+
+    function Cancelar() {
+        window.location.href = "../../Grafico/Index";
+    }
+</script>
+
+
