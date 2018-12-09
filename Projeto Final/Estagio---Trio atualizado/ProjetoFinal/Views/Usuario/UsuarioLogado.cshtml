@@ -1,0 +1,161 @@
+﻿@model UsuarioModel
+
+@{
+    Layout = "../Shared/_LayoutLogada.cshtml";
+}
+
+<head>
+    <style>
+        body {
+            background-color: #f7f7ff;
+        }
+
+        #tudo {
+            margin: 0px 130px 0px 130px;
+        }
+
+        #perfil {
+            height: 500px;
+            width: 260px;
+            margin-top: 20px;
+            border: 2px solid #afafaf;
+            border-radius: 5px;
+            float: left;
+            background-color: #e0e0e0;
+        }
+
+        #cont {
+            float: right;
+            margin-top: 20px;
+            height: 500px;
+            width: 799px;
+        }
+
+        .texto-perfil {
+            text-align: left;
+            margin: 5px 2px 0px 10px;
+            line-height: 40px;
+        }
+
+        #nome {
+            font-size: 40px;
+            text-shadow: 1px 1px 1px #4c4c4c;
+            text-align: center;
+            margin: 0px 0px 13px 0px;
+        }
+
+        .texto1 {
+            font-size: 17px;
+            text-shadow: 1px 1px 1px #727272;
+            margin: 0px 0px 0px 21px;
+        }
+
+        #peso {
+            font-size: 17px;
+            text-shadow: 1px 1px 1px #727272;
+            margin: 0px 0px 0px 10px;
+        }
+
+        .texto2 {
+            font-size: 18px;
+            text-shadow: 1px 1px 1px #727272;
+            margin: 0px 0px 0px 21px;
+        }
+
+        #simbolo {
+            text-align: center;
+        }
+
+        .rest {
+            font-size: 17px;
+            text-shadow: 1px 1px 1px #727272;
+            margin: 0px 0px 0px 21px;
+            line-height: 20px;
+        }
+
+        .texto3 {
+            font-size: 17px;
+            text-shadow: 1px 1px 1px #727272;
+            margin: 0px 0px 0px 21px;
+        }
+
+        .alimen {
+            font-size: 14px;
+        }
+
+        .title {
+            font-size: 40px;
+        }
+
+        .texto-cont {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!--CAIXA DE PERFIL-->
+    <div id="tudo">
+        <div id="perfil">
+            <p class="texto-perfil" id="simbolo"><i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i></p>
+            <p class="texto-perfil" id="nome"@ViewData["Nome"]>Sarah</p>
+            <p class="texto-perfil texto1" @ViewData["CONDICAO"]>Diabética e Hipertensa</p>
+            <p class="texto-perfil texto1" @ViewData["DATA_NASCIMENTO"]>Idade: 16 anos</p>
+            <a class="texto-perfil texto1">
+                Altura: 1,70m<a>
+    <a class="texto-perfil" id=peso @ViewData["PESO"]>Peso: 83kg</a>
+    <p class="texto-perfil texto1"<!-- Criar tabela imc no banco e esse campo-->@ViewData["VALOR"]>IMC = 28,7</p>
+    <p class="texto-perfil texto2"@ViewData["Faixa"]]><b>Você está ACIMA do peso!</b></p>
+    <p class="texto-perfil rest texto1"<!-- CRIAR ESSA CAMPO NO BANCO-->><b>Restrição Alimentar:</b></p>
+    <!--CRIAR CAMPO RESTRICAO ALIMENTAR NO BANCO DE DADOS-->
+    <p class="texto-perfil rest alimen texto3">- Sal deve ser na menor quantidade possível</p>
+    <p class="texto-perfil rest alimen texto3">- Banana em certa quantidade </p>
+    <p class="texto-perfil rest alimen texto3">- Frituras e frutas em forma de suco devem ser evitadas</p>
+    <p class="texto-perfil rest alimen texto3">- Leite desnatado ao invés do integral</p>
+</div>
+        <!--FIM DA CAIXA DE PERFIL-->
+        <!--CONTEÚDO AO LADO DO PERFIL-->
+        <div id="cont">
+            <p class="title"><b>Espaço para Gráfico</b></p>
+            <p class="texto-cont">ESPAÇOOOOOOOOOOOOOO</p>
+            <p class="title"><b>Cuide-se!</b></p>
+            <p class="texto-cont"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            <p class="title"><b>Algum Título</b></p>
+            <p class="texto-cont"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+        </div>
+    </div>
+</body>
+
+
+<!--
+
+(RAZOR)
+     var vA = " ";
+     var vI = " ";
+     var vAC = " ";
+     var vO = " ";
+     UsuarioModel dado = new UsuarioModel();
+     double imc = dado.CalcularIMC();
+
+     vA = ViewBag.abaixo.ToString();
+     vI = ViewBag.ideal.ToString();
+     vAC = viewBag.acima.ToString();
+     vO =ViewBag.obeso.ToString();
+}
+
+
+    //if (imc < 18.5)
+<p> vA </p>
+
+
+    //else if (imc >= 18.5 && imc <= 24.9)
+<p> vI</p>
+
+
+    //else if (imc >= 25 && imc <= 29.9)
+<p>vAC</p>
+
+
+    //else if (imc > 30)
+<P> vO</P>-->

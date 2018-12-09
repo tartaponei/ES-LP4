@@ -128,6 +128,27 @@ namespace ProjetoFinal.Controllers
             return RedirectToAction("UsuarioLogado");
         }
 
-    }
+        public IActionResult EditarConta()
+        {
+            return View();
+        }
+        public IActionResult UsuarioLogado(UsuarioModel dados)
+        {
+            var perfil = new UsuarioModel();
+
+
+
+            ViewData["Nome"] = perfil.Nome;
+            ViewData["DATA_NASCIMENTO"] = perfil.Data_Nascimento-DateTime.Now;
+            ViewData["CONDICAO"] = perfil.Condicao;
+            ViewData["ALTURA"] = perfil.Altura;
+            ViewData["PESO"] = perfil.Peso ;
+            ViewData["VALOR"] = perfil.Valor;
+
+
+            return View();
+        }
+            
+            }
  }
 

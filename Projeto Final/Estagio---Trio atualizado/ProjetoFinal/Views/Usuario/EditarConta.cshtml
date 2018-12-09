@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "EditarConta";
+}
+@{
+    Layout = "../Shared/_LayoutLogada.cshtml";
+}
+
+<head>
+    <style>
+        body {
+            background-color: #f7f7ff;
+        }
+
+        #tudo {
+            margin: 0px 130px 0px 130px;
+        }
+
+        #formulario {
+            margin: 20px 300px 0px 300px;
+        }
+
+        .btn1 {
+            float: right;
+        }
+    </style>
+</head>
+
+<div id="tudo">
+    <div id="formulario">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Novo nome: </label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o novo nome">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Nova senha: </label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite a nova senha">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Confirmar nova senha: </label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Confirmar a nova senha">
+        </div>
+        <button type="button" class="btn btn-primary btn1">Atualizar Dados</button>
+    </div>
+</div>

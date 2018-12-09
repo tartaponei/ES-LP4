@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+		<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-gJWVjz180MvwCrGGkC4xE5FjhWkTxHIR/+GgT8j2B3KKMgh6waEjPgzzh7lL7JZT" crossorigin="anonymous">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+		<style>
+			body {
+				background-color: #f7f7ff;
+			}
+
+			#tudo {
+				margin: 0px 130px 0px 130px;
+			} 
+			#formulario {
+				margin: 20px 30px 0px 250px;
+				float: left;
+			}
+
+			#formulario2 {
+				margin: 20px 250px 0px 100px;
+				float: right;
+			}
+
+			.btn1 {
+				float: right;
+			}
+
+			#title {
+				font-size: 29px;
+			} 
+		</style>
+	</head>	
+	<body>
+		<!--MENU-->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	  		<a class="navbar-brand" href="#"> <i class="fa fa-stethoscope" aria-hidden="true"></i> Mais Saúde</a>
+	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+	    		<span class="navbar-toggler-icon"></span>
+	 		</button>
+
+	  		<div class="collapse navbar-collapse" id="navbarColor01">
+		    		<ul class="navbar-nav mr-auto">
+		      			<li class="nav-item">
+		        			<a class="nav-link" href="#">Home <i class="fa fa-home" aria-hidden="true"></i></a>
+		      			</li>
+		      			<li class="nav-item">
+		        			<a class="nav-link" href="#">Dietas <i class="fa fa-lemon-o" aria-hidden="true"></i></a>
+		      			</li>
+		      			<li class="nav-item">
+		        			<a class="nav-link" href="#">Exercícios <i class="fa fa-heartbeat" aria-hidden="true"></i></a>
+		      			</li>
+		      			<li class="nav-item">
+		        			<a class="nav-link" href="#">Receitas <i class="fa fa-cutlery" aria-hidden="true"></i></a>
+		      			</li>
+		      			<li class="nav-item active">
+		        			<a class="nav-link" href="#">Verificar IMC <i class="fa fa-medkit" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
+		      			</li>
+		    		</ul>
+	    		<form class="form-inline my-2 my-lg-0">
+	      			<ul class="navbar-nav mr-auto">
+	      				<li class="nav-item">
+	        			<a class="nav-link" href="#"><b>Olá, Sarah!</b> <i class="fa fa-user-circle" aria-hidden="true"></i></a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<a class="nav-link" href="#">Logoff  <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<a class="nav-link" href="#">Política de Privacidade <i class="fa fa-users" aria-hidden="true"></i></a>
+	      			</li>
+	    		</ul>
+	    		</form>
+	  		</div>
+		</nav>
+		<!--FIM DO MENU-->
+
+		<!--FORMULÁRIO-->
+		<div id="tudo">
+			<div id="formulario">
+				<div class="form-group">
+					<p id="title"><b> Pressão Arterial </b></p>
+      				<label for="exampleInputEmail1"> Sístole: </label>
+      				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite a sístole">
+    			</div>
+    			<div class="form-group">
+      				<label for="exampleInputEmail1">Diástole: </label>
+      				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite a diástole">
+    			</div>
+    			<button type="button" class="btn btn-primary btn1">Enviar</button>
+			</div>
+
+			<div id="formulario2">
+				<div class="form-group">
+					<p id="title"><b> Nível Glicêmico </b></p>
+      				<label for="exampleInputEmail1"> Nível Glicêmico: </label>
+      				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o peso">
+    			</div>
+    			<button type="button" class="btn btn-primary btn1">Enviar</button>
+			</div>
+		</div>
+	</body>
+</html>
+
+<!--<form class="form-inline my-2 my-lg-0">
+	      			<input class="form-control mr-sm-2" type="text" placeholder="Search">
+	     			 <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+	    		</form>-->
