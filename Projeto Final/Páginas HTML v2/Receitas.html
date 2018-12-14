@@ -101,7 +101,19 @@
 			}
 
 			.dentro-menu {
-				margin: 20px;
+				margin: 20px 20px 20px 0px;
+			}
+
+			#esquerdo {
+				float: right;
+			}
+
+			.aish {
+				float:left;
+			}
+
+			#excluir {
+				background-color: red;
 			}
 		</style>
 	</head>	
@@ -131,7 +143,7 @@
 		        			<a class="nav-link" href="#">Verificar IMC <i class="fa fa-medkit" aria-hidden="true"></i></a>
 		      			</li>
 		    		</ul>
-	    		<form class="form-inline my-2 my-lg-0">
+	    		<form class="form-inline my-2 my-lg-0" id="esquerdo"> 
 	      			<ul class="navbar-nav mr-auto">
 	      				<li class="nav-item">
 	        			<a class="nav-link" href="#"><b>Olá, Sarah!</b> <i class="fa fa-user-circle" aria-hidden="true"></i></a>
@@ -150,7 +162,7 @@
 
 		<!--MENU DE RECEITAS-->
 		<div class="container">
- 			<h2>Receitas</h2>
+ 			<h1><b>Consulte as receitas!</b></h1>
   			<ul class="nav nav-tabs">
     			<li class="active"><a data-toggle="tab" href="#home">Receitas do Banco</a></li>
     			<li><a data-toggle="tab" href="#menu1">Minhas Receitas</a></li>
@@ -228,6 +240,13 @@
 						<p class="texto-perfil rest alimen texto3">1- Faça isso e depois aquilo</p>
 						<p class="texto-perfil rest alimen texto3">2- Faça mais isso por não sei quanto tempo</p>
 						<p class="texto-perfil rest alimen texto3">3- E coma</p>
+
+						<div class="dentro-menu aish">
+	    					<button type="button" class="btn btn-primary btn1">Editar Receita</button>
+	    				</div>
+	    				<div class="dentro-menu aish">
+	    					<button type="button" class="btn btn-danger">Excluir Receita</button>
+	    				</div>
 					</div>
 
 					<div id="perfil">
@@ -242,6 +261,13 @@
 						<p class="texto-perfil rest alimen texto3">1- Faça isso e depois aquilo</p>
 						<p class="texto-perfil rest alimen texto3">2- Faça mais isso por não sei quanto tempo</p>
 						<p class="texto-perfil rest alimen texto3">3- E coma</p>
+
+						<div class="dentro-menu aish">
+	    					<button type="button" class="btn btn-primary btn1">Editar Receita</button>
+	    				</div>
+	    				<div class="dentro-menu aish">
+	    					<button type="button" class="btn btn-danger">Excluir Receita</button>
+	    				</div>
 					</div>
 
 					<div id="perfil">
@@ -256,6 +282,13 @@
 						<p class="texto-perfil rest alimen texto3">1- Faça isso e depois aquilo</p>
 						<p class="texto-perfil rest alimen texto3">2- Faça mais isso por não sei quanto tempo</p>
 						<p class="texto-perfil rest alimen texto3">3- E coma</p>
+
+						<div class="dentro-menu aish">
+	    					<button type="button" class="btn btn-primary btn1">Editar Receita</button>
+	    				</div>
+	    				<div class="dentro-menu aish">
+	    					<button type="button" class="btn btn-danger">Excluir Receita</button>
+	    				</div>
 					</div>
 
 					<div id="perfil">
@@ -270,17 +303,32 @@
 						<p class="texto-perfil rest alimen texto3">1- Faça isso e depois aquilo</p>
 						<p class="texto-perfil rest alimen texto3">2- Faça mais isso por não sei quanto tempo</p>
 						<p class="texto-perfil rest alimen texto3">3- E coma</p>
+
+						<div class="dentro-menu aish">
+	    					<button type="button" class="btn btn-primary btn1">Editar Receita</button>
+	    				</div>
+	    				<div class="dentro-menu aish">
+	    					<button type="button" class="btn btn-danger">Excluir Receita</button>
+	    				</div>
 					</div>
     			</div>
     			<div id="menu2" class="tab-pane fade dentro-menu">
-      				<div class="form-group">
+      				<div class="form-group dentro-menu">
       					<label for="exampleInputEmail1">Nome da receita: </label>
       					<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o nome da receita">
 	    			</div>
-	    			<div class="form-group">
+	    			<div class="form-group dentro-menu">
+				    	<label for="exampleSelect1">Tipo da receita</label>
+				      	<select class="form-control" id="exampleSelect1">
+				        	<option>Diabética</option>
+				        	<option>Hipertensa</option>
+				        	<option>Diabética e Hipertensa</option>
+				      	</select>
+				    </div>
+	    			<div class="form-group dentro-menu">
 	      				<label for="exampleInputEmail1">Ingredientes da receita: </label>
 	      				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite ingrediente">
-	    			</div>
+	    			<div class="dentro-menu">
 	    				<button type="button" class="btn btn-primary btn1">Adicionar Ingrediente</button>
 	    			</div>
 	    			<div id="ing" class="dentro-menu">

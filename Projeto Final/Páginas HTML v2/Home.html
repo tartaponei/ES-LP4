@@ -34,16 +34,28 @@
 			}
 
 			.sobre {
-				margin: 20px 20px 20px 0px;
+				margin: 0px 10px 20px 0px;
 				float: left;
 				height: 200px;
-				width: 408.3px;
+				width: 32.4%;
 			}
 			.comentario {
-				margin: 20px 20px 20px 0px;
+				margin: 20px 10px 20px 0px;
 				float: left;
-				height: 200px;
-				width: 408.3px;
+				height: 100px;
+				width: 350px;
+			}
+
+			#esquerdo {
+				float: right;
+			}
+
+			#comentarios {
+				margin-top: 10px;
+			}
+
+			.comentario {
+				line-height: 25px;
 			}
 
 		</style>
@@ -62,7 +74,7 @@
                 		<a class="nav-link" asp-controller="Home" asp-action="Index">Home <i class="fa fa-home" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
             		</li>
         		</ul>
-        		<form class="form-inline my-2 my-lg-0">
+        		<form class="form-inline my-2 my-lg-0" id="esquerdo">
             		<ul class="navbar-nav mr-auto">
                 		<li class="nav-item">
                     		<a class="nav-link" asp-controller="Usuario" asp-action="Login"><b>Login</b> <i class="fa fa-user-circle" aria-hidden="true"></i></a>
@@ -120,6 +132,19 @@
   				</a>
 			</div>
 			<!-- FIM DO CARROSSEL -->
+			<!-- COMENTÁRIOS -->
+			<div id="comentarios">
+				<div>
+					<h4 class="comentario"><b>"Excelente app pra quem acabou de descobrir a doença e quer manter um acompanhamento diário! Parabéns"</b>, Anderson Marinheiro da Silva</h4>
+				</div>
+				<div>
+					<h4 class="comentario"><b>"Muito bom e útil"</b>, José Chambel</h4>
+				</div>
+				<div>
+					<h4 class="comentario"><b>"Recomendo a todos os diabéticos. Muito bom. Excelente"</b>, José Castro</h4>
+				</div>
+			</div>
+			<!-- FIM DOS COMENTARIOS -->
 			<!-- SOBRE O PROGRAMA -->
 			<div class="sobre">
 				<h4> Os desenvolvedores pensaram especialmente nas necessidades de pacientes diabéticos e hipertensos e nas dificuldades desses pacientes em serem acompanhados e aconselhados de forma correta. Pensando nisso, foi criado o Mais Saúde, um site especial de acompanhamento desses pacientes especiais, com dietas, exercícios e advertências em relação a peso, IMC, nível glicêmico e pressão. </h4>
@@ -131,17 +156,7 @@
 				<h4> Você pode ver seus níveis glicêmicos e de presão arterial em gráficos, e verificar a variação desses níveis e se estão altos ou baixos, tendo um controle maior dessas taxas de forma mais visual e cômoda. </h4>
 			</div>
 			<!-- FIM DO SOBRE O PROGRAMA -->
-			<!-- COMENTÁRIOS -->
-			<div class="comentario">
-				<h2> "comentario1", alguem disse </h2>
-			</div>
-			<div class="comentario">
-				<h2> "comentario2", alguem disse </h2>
-			</div>
-			<div class="comentario">
-				<h2> "comentario3", alguem disse </h2>
-			</div>
-			<!-- FIM DOS COMENTARIOS -->
+			<hr/>
 		</div>
 	</body>
 </html>

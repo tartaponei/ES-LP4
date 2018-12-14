@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+		<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-gJWVjz180MvwCrGGkC4xE5FjhWkTxHIR/+GgT8j2B3KKMgh6waEjPgzzh7lL7JZT" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<style>
+			body {
+				background-color: #f7f7ff;
+			}
+
+			#tudo {
+				margin: 0px 130px 0px 130px;
+			} 
+			#perfil {
+				height: 500px;
+				width: 260px;
+				margin-top: 20px;
+				border: 2px solid #afafaf;
+				border-radius: 5px;
+				float: left;
+				background-color: #e0e0e0;
+			}
+
+			#aerobico {
+				float: left;
+				margin-top: 20px; 
+				margin-left: 5%;
+				margin-bottom: 100px;
+				height: 2000px;
+				width: 42%;
+			}
+			#anaerobico {
+				float: right;
+				margin-top: 20px; 
+				margin-right: 5%;
+				margin-bottom: 100px;
+				height: 2000px;
+				width: 42%;
+			}
+
+			.texto-perfil {
+				text-align: left;
+				margin: 5px 2px 0px 10px;
+				line-height: 40px;
+			}
+
+			#nome {
+				font-size: 40px;
+				text-shadow: 1px 1px 1px #4c4c4c;
+				text-align: center;
+				margin: 0px 0px 13px 0px;
+			}
+
+			.texto1 {
+				font-size: 17px;
+				text-shadow: 1px 1px 1px #727272;
+				margin: 0px 0px 0px 21px;
+			}
+
+			#peso {
+				font-size: 17px;
+				text-shadow: 1px 1px 1px #727272;
+				margin: 0px 0px 0px 10px;
+			}
+
+			.texto2 {
+				font-size: 18px;
+				text-shadow: 1px 1px 1px #727272;
+				margin: 0px 0px 0px 21px;
+			}
+
+			#simbolo {
+				text-align: center;
+			}
+
+			.rest {
+				font-size: 17px;
+				text-shadow: 1px 1px 1px #727272;
+				margin: 0px 0px 0px 21px;
+				line-height: 20px;
+				
+			}
+
+			.texto3 {
+				font-size: 17px;
+				text-shadow: 1px 1px 1px #727272;
+				margin: 0px 0px 0px 21px;
+			}
+
+			.alimen {
+				font-size: 14px;
+			}
+
+			.title {
+				font-size: 40px;
+			}
+
+			.texto-cont {
+				font-size: 16px;
+			}
+
+			#esquerdo {
+				float: right;
+			}
+
+			#final {
+				height: 100px;
+				width: 100%;
+			}
+		</style>
+	</head>	
+	<body>
+		<!--MENU-->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	  		<a class="navbar-brand" href="#"> <i class="fa fa-stethoscope" aria-hidden="true"></i> Mais Saúde</a>
+	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+	    		<span class="navbar-toggler-icon"></span>
+	 		</button>
+
+	  		<div class="collapse navbar-collapse" id="navbarColor01">
+		    		<ul class="navbar-nav mr-auto">
+		      			<li class="nav-item">
+		        			<a class="nav-link" href="#">Home <i class="fa fa-home" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
+		      			</li>
+		      			<li class="nav-item active">
+		        			<a class="nav-link" href="#">Dietas <i class="fas fa-carrot"></i></a>
+		      			</li>
+		      			<li class="nav-item">
+		        			<a class="nav-link" href="#">Exercícios <i class="fa fa-heartbeat" aria-hidden="true"></i></a>
+		      			</li>
+		      			<li class="nav-item">
+		        			<a class="nav-link" href="#">Receitas <i class="fas fa-utensils"></i></a>
+		      			</li>
+		      			<li class="nav-item">
+		        			<a class="nav-link" href="#">Verificar IMC <i class="fa fa-medkit" aria-hidden="true"></i></a>
+		      			</li>
+		    		</ul>
+	    		<form class="form-inline my-2 my-lg-0" id="esquerdo">
+	      			<ul class="navbar-nav mr-auto">
+	      				<li class="nav-item">
+	        			<a class="nav-link" href="#"><b>Olá, Sarah!</b> <i class="fa fa-user-circle" aria-hidden="true"></i></a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<a class="nav-link" href="#">Logoff  <i class="fas fa-sign-out-alt"></i></a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<a class="nav-link" href="#">Política de Privacidade <i class="fa fa-users" aria-hidden="true"></i></a>
+	      			</li>
+	    		</ul>
+	    		</form>
+	  		</div>
+		</nav>
+		<!--FIM DO MENU-->
+		<div id="tudo">
+			<!-- DIETAS -->
+			<div class="container">
+ 			<h1><b>Consulte as dietas!</b></h1>
+  			<ul class="nav nav-tabs">
+    			<li class="active"><a data-toggle="tab" href="#home">Diabéticas</a></li>
+    			<li><a data-toggle="tab" href="#menu1">Hipertensas</a></li>
+  			</ul>
+
+  			<div class="tab-content">
+    			<div id="home" class="tab-pane fade in active">
+    				<center>
+	    				<h2 style="color: #2e6c80;">&nbsp;</h2>
+				        <table style="height: 1109px; width: 1003px;" border="2">
+				            <tbody>
+				                <tr style="height: 20px; background-color: #95d6bc;">
+				                    <td style="width: 33px; height: 20px;"><strong>N&deg;</strong></td>
+				                    <td style="width: 219px; height: 20px; text-align: center;"><strong>Caf&eacute; da Manh&atilde;</strong></td>
+				                    <td style="width: 202px; height: 20px; text-align: center;"><strong>Almo&ccedil;o</strong></td>
+				                    <td style="width: 198px; height: 20px; text-align: center;"><strong>Janta</strong></td>
+				                    <td style="width: 212px; height: 20px; text-align: center;"><strong>Lanche(3x)</strong></td>
+				                    <td style="width: 97px; height: 20px; text-align: center;"><strong>Calorias</strong></td>
+				                </tr>
+				                <tr style="height: 3px;">
+				                    <td style="width: 33px; height: 3px; background-color: #95d6bc;">1</td>
+				                    <td style="width: 219px; height: 3px;">- copo de leite desnatado<br />- 1 colher de caf&eacute; de caf&eacute;<br />sol&uacute;vel com ado&ccedil;ante<br />- 2 fatias de p&atilde;o integral<br />- 1 fatia de queijo prato<br />- 1 colher de ch&aacute; de<br />margarina light<br />- 1 fatia grande de mam&atilde;o</td>
+				                    <td style="width: 202px; height: 3px;">- salada mista de alface,<br />pepino e tomate &agrave; vontade<br />- 4 colheres de sopa de<br />chuchu refogado com milho<br />- 1 bife acebolado<br />- 2 colheres de sopa de arroz<br />- 1 concha de feij&atilde;o</td>
+				                    <td style="width: 198px; height: 3px;">- salada de abobrinha &agrave;<br />vontade<br />- 4 colheres de sopa de couveflor<br />com cenoura refogados<br />- 1 coxa com sobrecoxa sem<br />pele de frango assado<br />- 1 pegador de macarr&atilde;o com<br />molho de tomate</td>
+				                    <td style="width: 212px; height: 3px;">- 1 banana prata<br />- 1 iogurte natural com<br />ado&ccedil;ante<br />---------------------------------<br />- suco de abacaxi (com<br />ado&ccedil;ante, se necess&aacute;rio)<br />- 4 bolachas integrais<br />---------------------------------<br />- gelatina diet</td>
+				                    <td style="width: 97px; height: 3px;">1500</td>
+				                </tr>
+				                <tr style="height: 81px;">
+				                    <td style="width: 33px; height: 81px; background-color: #95d6bc;">2</td>
+				                    <td style="width: 219px; height: 81px;">- 2 fatias de p&atilde;o de forma<br />integral<br />- 1 colher de sopa de<br />manteiga com sal light<br />- 1 x&iacute;cara de ma&ccedil;&atilde; fatiada<br />- 1 x&iacute;cara de ch&aacute; ou caf&eacute;<br />sem a&ccedil;&uacute;car<br />- 235ml de &aacute;gua</td>
+				                    <td style="width: 202px; height: 81px;">- salada com 2 colheres de<br />sopa de tempero<br />- 120g de atum<br />- 200ml de suco natural de<br />laranja<br />- &frac12; concha de feij&atilde;o carioca</td>
+				                    <td style="width: 198px; height: 81px;">- salada com 2 colheres de<br />sopa de tempero<br />- 115g de peito de frango<br />grelhado sem pele<br />- &frac12; concha de feij&atilde;o preto<br />- 350ml de &aacute;gua</td>
+				                    <td style="width: 212px; height: 81px;">- &frac12; x&iacute;cara de amoras<br />---------------------------------<br />- 1 &frac12; x&iacute;cara de morangos<br />fatiados</td>
+				                    <td style="width: 97px; height: 81px;">1000</td>
+				                </tr>
+				                <tr style="height: 81px;">
+				                    <td style="width: 33px; height: 81px; background-color: #95d6bc;">3</td>
+				                    <td style="width: 219px; height: 81px;">- 2 fatias de p&atilde;o de forma<br />integral recheadas com 1<br />banana pequena<br />- 150ml de suco natural de<br />laranja</td>
+				                    <td style="width: 202px; height: 81px;">- 1 p&atilde;o franc&ecirc;s integral<br />recheado com 70g de atum<br />e 10g de maionese light<br />- salada com 50g de alface,<br />10g de cebola e 50g de<br />piment&atilde;o vermelho<br />- 1 copo de &aacute;gua</td>
+				                    <td style="width: 198px; height: 81px;">- 70g de peito de frango<br />grelhado sem pele<br />- 50g de br&oacute;colis cozidos<br />- 50g de cenouras<br />- 100g de batata-doce com<br />casca assada</td>
+				                    <td style="width: 212px; height: 81px;">- 170g de iogurte de<br />mam&atilde;o zero gorduras<br />com &frac12; colher de ch&aacute; de<br />linha&ccedil;a<br />---------------------------------<br />- 1 ma&ccedil;&atilde; m&eacute;dia<br />---------------------------------<br />- 1 mini p&atilde;o franc&ecirc;s<br />integral com 1 colher de<br />sopa de queijo cottage<br />- 1 copo de &aacute;gua</td>
+				                    <td style="width: 97px; height: 81px;">1000</td>
+				                </tr>
+				                <tr style="height: 17.4219px;">
+				                    <td style="width: 33px; height: 17.4219px; background-color: #95d6bc;">4</td>
+				                    <td style="width: 219px; height: 17.4219px;">- 1 copo de leite desnatado<br />- 1 unidade de p&atilde;o franc&ecirc;s<br />sem miolo<br />- 1/3 de colher de sopa<br />margarina sem sal<br />- 1 colher de sopa de<br />am&ecirc;ndoas sem casca<br />- 1 x&iacute;cara de ch&aacute; ou caf&eacute;<br />com um envelope de<br />ado&ccedil;ante</td>
+				                    <td style="width: 202px; height: 17.4219px;">- 3 colheres de sopa de arroz<br />integral<br />- 70g de peito de frango<br />grelhado sem pele<br />- 100g de couve refogada<br />- 50g de cenoura<br />-50g de tomate<br />- 1 folha grande de alface</td>
+				                    <td style="width: 198px; height: 17.4219px;">- 3 colheres de sopa de arroz<br />integral<br />- 100g de lombo bovino<br />- 1 x&iacute;cara de couve-flor cozida<br />- 1 colher de sopa de lentilhas<br />- 1 x&iacute;cara de pepino fatiado<br />descascado<br />- 1 folha grande de alface<br />- &frac12; chuchu</td>
+				                    <td style="width: 212px; height: 17.4219px;">- 1 mam&atilde;o pequeno<br />---------------------------------<br />- 1 laranja<br />- ch&aacute; com um envelope<br />de ado&ccedil;ante<br />---------------------------------<br />- &frac12; banana-nanica</td>
+				                    <td style="width: 97px; height: 17.4219px;">1000</td>
+				                </tr>
+				            </tbody>
+				        </table>
+				    </center>
+    			</div>
+    			<div id="menu1" class="tab-pane fade">
+    				<center>
+	      				<h2 style="color: #2e6c80;">&nbsp;</h2>
+				        <table style="height: 313px; width: 586px;" border="2">
+				            <tbody>
+				                <tr style="height: 20px; background-color: #95d6bc;">
+				                    <td style="width: 26px; height: 20px;"><strong>N&deg;</strong></td>
+				                    <td style="width: 132px; height: 20px; text-align: center;"><strong>Caf&eacute; da Manh&atilde;</strong></td>
+				                    <td style="width: 153px; height: 20px; text-align: center;"><strong>Almo&ccedil;o/Janta</strong></td>
+				                    <td style="width: 138px; height: 20px; text-align: center;"><strong>Lanche(3x)</strong></td>
+				                    <td style="width: 129px; height: 20px; text-align: center;"><strong>Calorias</strong></td>
+				                </tr>
+				                <tr style="height: 43.8438px;">
+				                    <td style="width: 26px; height: 43.8438px; background-color: #95d6bc;">1</td>
+				                    <td style="width: 132px; height: 43.8438px;">- leite desnatado<br />- p&atilde;o integral com queijo minas</td>
+				                    <td style="width: 153px; height: 43.8438px;">- frango ao forno<br />- 4 colheres de sopa de arroz<br />- 2 colheres de sopa de feij&atilde;o<br />- salada crua de alface, tomate e<br />pepino</td>
+				                    <td style="width: 138px; height: 43.8438px;">- 1 ma&ccedil;&atilde;<br />- 2 castanhas<br />-----------------------------<br />- iogurte desnatado com<br />linha&ccedil;a<br />- 4 torradas integrais com<br />ricota</td>
+				                    <td style="width: 129px; height: 43.8438px;">1200</td>
+				                </tr>
+				                <tr style="height: 85px;">
+				                    <td style="width: 26px; height: 85px; background-color: #95d6bc;">2</td>
+				                    <td style="width: 132px; height: 85px;">- iogurte desnatado<br />- cereais integrais de aveia</td>
+				                    <td style="width: 153px; height: 85px;">- frango em cubos com molho de<br />tomate<br />- macarr&atilde;o integral<br />- piment&atilde;o, cebola, azeitona,<br />cenoura ralada e br&oacute;colis</td>
+				                    <td style="width: 138px; height: 85px;">- vitamina de abacate com<br />leite desnatado<br />-----------------------------<br />- suco de morango<br />- 4 biscoitos integrais</td>
+				                    <td style="width: 129px; height: 85px;">1200</td>
+				                </tr>
+				                <tr style="height: 184px;">
+				                    <td style="width: 26px; height: 184px; background-color: #95d6bc;">3</td>
+				                    <td style="width: 132px; height: 184px;">- leite desnatado com caf&eacute;<br />- torradas integrais com<br />margarina</td>
+				                    <td style="width: 153px; height: 184px;">- peixe cozido<br />- 2 batatas m&eacute;dias<br />- salada de cebola, vagem e milho</td>
+				                    <td style="width: 138px; height: 184px;">- 1 banana com flocos de aveia<br />- suco verde de couve<br />- 1 p&atilde;o integral com queijo</td>
+				                    <td style="width: 129px; height: 184px;">1000</td>
+				                </tr>
+				            </tbody>
+				        </table>
+				    </center>
+    			</div>
+			</div>
+			<!-- FIM DAS DIETAS -->
+		</div>
+		<div id="final"></div>
+	</body>
+</html>
