@@ -39,25 +39,72 @@
 				height: 200px;
 				width: 32.4%;
 			}
-			.comentario {
-				margin: 20px 10px 20px 0px;
-				float: left;
-				height: 100px;
-				width: 350px;
-			}
 
 			#esquerdo {
 				float: right;
 			}
 
-			#comentarios {
-				margin-top: 10px;
+			#comentario {
+				margin: 20px 12px 20px 0px;
+				float: left;
+				height: 100px;
+				width: 32.71%;
+				background-color: #d1d1d1;
+				border-radius: 2px;
+				border: 1px solid #8c8c8c;
+			}
+
+			#comentario3 {
+				margin: 20px 0px 20px 10px;
+				float: right;
+				height: 100px;
+				width: 32.71%;
+				background-color: #d1d1d1;
+				border-radius: 3px;
+				border: 1px solid #8c8c8c;
+			}
+
+			#comentario2 {
+				margin: 20px 0px 20px 0px;
+				float: left;
+				height: 100px;
+				width: 32.71%;
+				background-color: #d1d1d1;
+				border-radius: 3px;
+				border: 1px solid #8c8c8c;
 			}
 
 			.comentario {
 				line-height: 25px;
+				margin: 10px;
 			}
 
+			#sobre1 {
+				height: 240px;
+				margin: 0px 0px 130px 130px;
+				background-color: #ff4c4c;
+				border: 2px solid #912a2a;
+			}
+
+			#img1 {
+				margin: 0px 0px 0px 130px;
+				height: 300px;
+				background: url("./images/logo.png");
+				background-size: 100% 100%;
+				border: 2px solid #912a2a;
+				border-bottom: 0px;
+			}
+
+			#s1 {
+				float: left;
+				width: 600px;
+			}
+
+			#sobre2 {
+				float: right;
+				width: 810px;
+				margin-right: 130px;
+			}
 		</style>
 	</head>	
 	<body>
@@ -133,30 +180,32 @@
 			</div>
 			<!-- FIM DO CARROSSEL -->
 			<!-- COMENTÁRIOS -->
-			<div id="comentarios">
-				<div>
-					<h4 class="comentario"><b>"Excelente app pra quem acabou de descobrir a doença e quer manter um acompanhamento diário! Parabéns"</b>, Anderson Marinheiro da Silva</h4>
-				</div>
-				<div>
-					<h4 class="comentario"><b>"Muito bom e útil"</b>, José Chambel</h4>
-				</div>
-				<div>
-					<h4 class="comentario"><b>"Recomendo a todos os diabéticos. Muito bom. Excelente"</b>, José Castro</h4>
+			<div id="comentario">
+				<h4 class="comentario"><b>"Excelente app pra quem acabou de descobrir a doença e quer manter um acompanhamento diário! Parabéns"</b>, Anderson Marinheiro da Silva</h4>
+			</div>
+			<div id="comentario2">
+				<h4 class="comentario"><b>"Muito bom e útil"</b>, José Chambel</h4>
+			</div>
+			<div id="comentario3">
+				<h4 class="comentario"><b>"Recomendo a todos os diabéticos. Muito bom. Excelente"</b>, José Castro</h4>
 				</div>
 			</div>
 			<!-- FIM DOS COMENTARIOS -->
 			<!-- SOBRE O PROGRAMA -->
-			<div class="sobre">
-				<h4> Os desenvolvedores pensaram especialmente nas necessidades de pacientes diabéticos e hipertensos e nas dificuldades desses pacientes em serem acompanhados e aconselhados de forma correta. Pensando nisso, foi criado o Mais Saúde, um site especial de acompanhamento desses pacientes especiais, com dietas, exercícios e advertências em relação a peso, IMC, nível glicêmico e pressão. </h4>
+			<div id="s1">
+				<div id="img1" class="img-responsive"></div>
+				<div id="sobre1">
+					<h4 class="comentario"> Os desenvolvedores pensaram especialmente nas necessidades de pacientes diabéticos e hipertensos e nas dificuldades desses pacientes em serem acompanhados e aconselhados de forma correta. Pensando nisso, foi criado o <b>Mais Saúde</b>, um site especial de acompanhamento desses pacientes especiais, com <b>dietas, exercícios e advertências em relação a peso, IMC, nível glicêmico e pressão</b>.</h4>
+				</div>
 			</div>
-			<div class="sobre">
-				<h4> Através do nosso menu de dietas e receitas, você pode acessar dietas especiais e personalizadas de acordo com a sua condição, podendo verificar o número de calorias e as refeições, além de procurar receitas perfeitas para juntar seus gostos e necessidades. Além disso, você pode consultar exercícios e escolher o melhor para complementar seu dia, vendo quantas calorias são queimadas durante determinado tempo de exercício e os benefícios da atividade.</h4>
-			</div>
-			<div class="sobre">
-				<h4> Você pode ver seus níveis glicêmicos e de presão arterial em gráficos, e verificar a variação desses níveis e se estão altos ou baixos, tendo um controle maior dessas taxas de forma mais visual e cômoda. </h4>
+			
+			<div id="sobre2">
+				<ul>
+					<li><h4>Através do nosso menu de dietas e receitas, você pode acessar <b>dietas especiais e personalizadas de acordo com a sua condição</b>, podendo verificar o <b>número de calorias e as refeições</b>, além de procurar receitas perfeitas para juntar seus gostos e necessidades. Além disso, você pode <b>consultar exercícios</b> e escolher o melhor para complementar seu dia, vendo <b>quantas calorias são queimadas durante determinado tempo de exercício e os benefícios da atividade</b>.</h4></li>
+					<li><h4>Você pode ver <b>seus níveis glicêmicos e de presão arterial em gráficos</b>, e verificar a variação desses níveis e se estão altos ou baixos, tendo um controle maior dessas taxas de forma mais visual e cômoda.</h4></li>
+				</ul>
 			</div>
 			<!-- FIM DO SOBRE O PROGRAMA -->
-			<hr/>
 		</div>
 	</body>
 </html>
