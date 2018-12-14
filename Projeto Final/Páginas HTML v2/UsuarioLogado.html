@@ -8,6 +8,30 @@
 		<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-gJWVjz180MvwCrGGkC4xE5FjhWkTxHIR/+GgT8j2B3KKMgh6waEjPgzzh7lL7JZT" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
 
+		<link  id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet' type='text/css'>
+		<script>
+			WebFontConfig = {
+				google: 
+				{families: ["Open Sans",]},active: function() { 
+			 	DrawTheChart(ChartData,ChartOptions,"chart-01","Line")}
+			};
+		</script>
+
+		<script asyn src="https://livegap.com/charts/js/webfont.js">
+		</script><script src="https://livegap.com/charts/js/Chart.min.js"></script>
+		<script>
+function DrawTheChart(ChartData,ChartOptions,ChartId,ChartType){
+eval('var myLine = new Chart(document.getElementById(ChartId).getContext("2d")).'+ChartType+'(ChartData,ChartOptions);document.getElementById(ChartId).getContext("2d").stroke();')
+}
+		</script>
+
+		<script>
+			function excluir()
+			{
+				prompt("Deseja mesmo excluir sua conta? Se sim, confirme senha:");
+			}
+		</script>
+
 		<style>
 			body {
 				background-color: #f7f7ff;
@@ -17,7 +41,7 @@
 				margin: 0px 130px 0px 130px;
 			} 
 			#perfil {
-				height: 500px;
+				height: 540px;
 				width: 260px;
 				margin-top: 20px;
 				border: 2px solid #afafaf;
@@ -97,6 +121,23 @@
 			#esquerdo {
 				float: right;
 			}
+
+			#grafico {
+				margin-bottom: 20px;
+				margin-top: 10px;
+			}
+
+			.botao {
+				margin-left: 21px;
+				margin-top: 15px;
+				float: left;
+			}
+
+			.botao2 {
+				margin-right: 21px;
+				margin-top: 15px;
+				float: right;
+			}
 		</style>
 	</head>	
 	<body>
@@ -158,16 +199,24 @@
 				<p class="texto-perfil rest alimen texto3">- Banana em certa quantidade </p>
 				<p class="texto-perfil rest alimen texto3">- Frituras e frutas em forma de suco devem ser evitadas</p>
 				<p class="texto-perfil rest alimen texto3">- Leite desnatado ao invés do integral</p>
+				<button type="button" class="btn btn-primary botao btn-sm">Editar Conta</button>
+				<button type="button" onclick="excluir()" class="btn btn-danger botao2 btn-sm">Excluir Conta</button>
 			</div>
 		    <!--FIM DA CAIXA DE PERFIL-->
 		    <!--CONTEÚDO AO LADO DO PERFIL-->
 			<div id="cont">
-				<p class="title"><b>Espaço para Gráfico</b></p>
-				<p class="texto-cont">ESPAÇOOOOOOOOOOOOOO</p>
-				<p class="title"><b>Cuide-se!</b></p>
-				<p class="texto-cont"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-				<p class="title"><b>Algum Título</b></p>
-				<p class="texto-cont"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+				<p class="title"><b>Gráficos</b></p>
+				<canvas  id="chart-01" width="700" height="400"  style="background-color:rgba(255,255,255,1.00);border-radius:0px;width:700px;height:400px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px"></canvas>
+				<script> function MoreChartOptions(){} var ChartData = {labels : ["01/10/2018",
+					"02/10/2018","03/10/2018","04/10/2018","05/10/2018","06/10/2018","07/10/2018",],datasets : [{fillColor :"rgba(37,116,168,0.6)",strokeColor : "rgba(37,116,168,1)",pointColor : "rgba(37,116,168,1)",markerShape :"circle",pointStrokeColor : "rgba(255,255,255,1.00)",data : [12,14,13,10,14,13,12,],title:"Sistólica"},{fillColor :"rgba(51,204,46,0.49)",strokeColor : "rgba(59,204,46,1)",pointColor : "rgba(46,204,64,1)",markerShape :"circle",pointStrokeColor : "rgba(255,255,255,1.00)",data : [8,9,8,6,9,8,8,],title:"Diastólica"},]};ChartOptions= {decimalSeparator:".",thousandSeparator:",",spaceLeft:12,spaceRight:12,spaceTop:12,spaceBottom:12,scaleLabel:"<%=value+''%>",yAxisMinimumInterval:'none',scaleShowLabels:true,scaleShowLine:true,scaleLineStyle:"solid",scaleLineWidth:1,scaleLineColor:"rgba(0,0,0,0.6)",scaleOverlay :false,scaleOverride :false,scaleSteps:10,scaleStepWidth:10,scaleStartValue:0,legend:true,maxLegendCols:5,legendBlockSize:15,legendFillColor:'rgba(255,255,255,0.00)',legendColorIndicatorStrokeWidth:1,legendPosX:-2,legendPosY:4,legendXPadding:0,legendYPadding:0,legendBorders:false,legendBordersWidth:1,legendBordersStyle:"solid",legendBordersColors:"rgba(102,102,102,1)",legendBordersSpaceBefore:5,legendBordersSpaceLeft:5,legendBordersSpaceRight:5,legendBordersSpaceAfter:5,legendSpaceBeforeText:5,legendSpaceLeftText:5,legendSpaceRightText:5,legendSpaceAfterText:5,legendSpaceBetweenBoxAndText:5,legendSpaceBetweenTextHorizontal:5,legendSpaceBetweenTextVertical:5,legendFontFamily:"'Open Sans'",legendFontStyle:"normal normal",legendFontColor:"rgba(0,0,0,1)",legendFontSize:15,showYAxisMin:false,rotateLabels:"smart",xAxisBottom:true,yAxisLeft:true,yAxisRight:false,graphTitleSpaceBefore:5,graphTitleSpaceAfter:5, graphTitleBorders:false,graphTitleBordersXSpace:1,graphTitleBordersYSpace:1,graphTitleBordersWidth:1,graphTitleBordersStyle:"solid",graphTitleBordersColor:"rgba(0,0,0,1)",graphTitle : "Pressão Arterial",graphTitleFontFamily:"'Open Sans'",graphTitleFontStyle:"normal normal",graphTitleFontColor:"rgba(52,152,219,1)",graphTitleFontSize:26,graphSubTitleSpaceBefore:0,graphSubTitleSpaceAfter:5, graphSubTitleBorders:false,graphSubTitleBordersXSpace:1,graphSubTitleBordersYSpace:1,graphSubTitleBordersWidth:1,graphSubTitleBordersStyle:"solid",graphSubTitleBordersColor:"rgba(0,0,0,1)",graphSubTitle : "",graphSubTitleFontFamily:"'Open Sans'",graphSubTitleFontStyle:"normal normal",graphSubTitleFontColor:"rgba(102,102,102,1)",graphSubTitleFontSize:16,scaleFontFamily:"'Open Sans'",scaleFontStyle:"normal normal",scaleFontColor:"rgba(0,0,0,1)",scaleFontSize:12,pointLabelFontFamily:"'Open Sans'",pointLabelFontStyle:"normal normal",pointLabelFontColor:"rgba(102,102,102,1)",pointLabelFontSize:12,angleShowLineOut:true,angleLineStyle:"solid",angleLineWidth:1,angleLineColor:"rgba(0,0,0,0.1)",percentageInnerCutout:50,scaleShowGridLines:true,scaleGridLineStyle:"solid",scaleGridLineWidth:1,scaleGridLineColor:"rgba(0,0,0,0.1)",scaleXGridLinesStep:1,scaleYGridLinesStep:3,segmentShowStroke:true,segmentStrokeStyle:"solid",segmentStrokeWidth:2,segmentStrokeColor:"rgba(255,255,255,1.00)",datasetStroke:true,datasetFill : true,datasetStrokeStyle:"solid",datasetStrokeWidth:2,bezierCurve:true,bezierCurveTension :0.4,pointDotStrokeStyle:"solid",pointDotStrokeWidth : 1,pointDotRadius : 3,pointDot : true,scaleTickSizeBottom:5,scaleTickSizeTop:5,scaleTickSizeLeft:5,scaleTickSizeRight:5,barShowStroke : false,barBorderRadius:0,barStrokeStyle:"solid",barStrokeWidth:1,barValueSpacing:15,barDatasetSpacing:0,scaleShowLabelBackdrop :true,scaleBackdropColor:'rgba(255,255,255,0.75)',scaleBackdropPaddingX :2,scaleBackdropPaddingY :2,animation : true,onAnimationComplete : function(){MoreChartOptions()}};
+						DrawTheChart(ChartData,ChartOptions,"chart-01","Line");
+				</script>
+
+ 				<div id="grafico">
+ 					<img src="./images/grafico.png">
+ 				</div>
+
+				
 			</div>
 		</div>
 	</body>
