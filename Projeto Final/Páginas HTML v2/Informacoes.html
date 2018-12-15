@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+		<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-gJWVjz180MvwCrGGkC4xE5FjhWkTxHIR/+GgT8j2B3KKMgh6waEjPgzzh7lL7JZT" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<style>
+			body {
+				background-color: #f7f7ff;
+			}
+
+			#tudo {
+				margin: 0px 130px 0px 130px;
+			} 
+			#perfil {
+				height: 500px;
+				width: 260px;
+				margin-top: 20px;
+				border: 2px solid #afafaf;
+				border-radius: 5px;
+				float: left;
+				background-color: #e0e0e0;
+			}
+
+			#aerobico {
+				float: left;
+				margin-top: 20px; 
+				margin-left: 5%;
+				margin-bottom: 100px;
+				height: 2000px;
+				width: 42%;
+			}
+			#anaerobico {
+				float: right;
+				margin-top: 20px; 
+				margin-right: 5%;
+				margin-bottom: 100px;
+				height: 2000px;
+				width: 42%;
+			}
+
+			.texto-perfil {
+				text-align: left;
+				margin: 5px 2px 0px 10px;
+				line-height: 40px;
+			}
+
+			#nome {
+				font-size: 40px;
+				text-shadow: 1px 1px 1px #4c4c4c;
+				text-align: center;
+				margin: 0px 0px 13px 0px;
+			}
+
+			.texto1 {
+				font-size: 17px;
+				text-shadow: 1px 1px 1px #727272;
+				margin: 0px 0px 0px 21px;
+			}
+
+			#peso {
+				font-size: 17px;
+				text-shadow: 1px 1px 1px #727272;
+				margin: 0px 0px 0px 10px;
+			}
+
+			.texto2 {
+				font-size: 18px;
+				text-shadow: 1px 1px 1px #727272;
+				margin: 0px 0px 0px 21px;
+			}
+
+			#simbolo {
+				text-align: center;
+			}
+
+			.rest {
+				font-size: 17px;
+				text-shadow: 1px 1px 1px #727272;
+				margin: 0px 0px 0px 21px;
+				line-height: 20px;
+				
+			}
+
+			.texto3 {
+				font-size: 17px;
+				text-shadow: 1px 1px 1px #727272;
+				margin: 0px 0px 0px 21px;
+			}
+
+			.alimen {
+				font-size: 14px;
+			}
+
+			.title {
+				font-size: 40px;
+			}
+
+			.texto-cont {
+				font-size: 16px;
+			}
+
+			#esquerdo {
+				float: right;
+			}
+
+			#final {
+				height: 100px;
+				width: 100%;
+			}
+
+			.exe {
+				line-height: 24px;
+			}
+
+			#exe {
+				margin-top: 30px;
+			}
+		</style>
+	</head>	
+	<body>
+		<!--MENU-->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	  		<a class="navbar-brand" href="#"> <i class="fa fa-stethoscope" aria-hidden="true"></i> Mais Saúde</a>
+	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+	    		<span class="navbar-toggler-icon"></span>
+	 		</button>
+
+	  		<div class="collapse navbar-collapse" id="navbarColor01">
+		    		<ul class="navbar-nav mr-auto">
+		      			<li class="nav-item">
+		        			<a class="nav-link" href="#">Home <i class="fa fa-home" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
+		      			</li>
+		      			<li class="nav-item">
+		        			<a class="nav-link" href="#">Dietas <i class="fas fa-carrot"></i></a>
+		      			</li>
+		      			<li class="nav-item">
+		        			<a class="nav-link" href="#">Exercícios <i class="fa fa-heartbeat" aria-hidden="true"></i></a>
+		      			</li>
+		      			<li class="nav-item">
+		        			<a class="nav-link" href="#">Receitas <i class="fas fa-utensils"></i></a>
+		      			</li>
+		      			<li class="nav-item">
+		        			<a class="nav-link" href="#">Verificar IMC <i class="fa fa-medkit" aria-hidden="true"></i></a>
+		      			</li>
+		      			<li class="nav-item">
+		        			<a class="nav-link" href="#">Altualizar Taxas <i class="fas fa-chart-line"></i></a>
+		      			</li>
+		      			<li class="nav-item active">
+		        			<a class="nav-link" href="#">Dicas Úteis <i class="fas fa-info-circle"></i></a>
+		      			</li>
+		    		</ul>
+	    		<form class="form-inline my-2 my-lg-0" id="esquerdo">
+	      			<ul class="navbar-nav mr-auto">
+	      				<li class="nav-item">
+	        			<a class="nav-link" href="#"><b>Olá, Sarah!</b> <i class="fa fa-user-circle" aria-hidden="true"></i></a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<a class="nav-link" href="#">Logoff  <i class="fas fa-sign-out-alt"></i></a>
+	      			</li>
+	      			<li class="nav-item">
+	        			<a class="nav-link" href="#">Política de Privacidade <i class="fa fa-users" aria-hidden="true"></i></a>
+	      			</li>
+	    		</ul>
+	    		</form>
+	  		</div>
+		</nav>
+		<!--FIM DO MENU-->
+		<div id="tudo">
+			<!-- INFORMACOES -->
+ 			<h1><b>Cuide-se!</b></h1>
+  			<p><h3>Se você é <b>diabético</b>, é importante que você:</h3></p>
+  			<ul>
+  				<h3><li><b>Fique de olho nos pés</b></li></h3>
+  				<p><h4>A doença faz com que você perca sensibilidade em algumas partes do corpo, geralmente atingindo os pés primeiro. Juntando essa informação ao fato de que a cicatrização em diabéticos é menos eficiente, fique atento a quaisquer tipos de lesões nos seus pés!</h4></p>
+
+  				<h3><li><b>Cuide sa sua saúde bucal</b></li></h3>
+  				<p><h4>Devido à maior concentração de açúcar no seu sangue, você está mais propício à <b>periodontite</b>, doença que ataca as gengivas. Por isso, sempre mantenha sua boca muito bem higienizada!</h4></p>
+
+  				<h3><li><b>Tome cuidado com dieta</b></li></h3>
+  				<p><h4>O essencial é que você <b>evite açúcar e massas</b>, e aprenda a comer de tudo com moderação. Você deve consumir <b>mais fibras, minerais e fibras</b>, e, no caso de diabetes tipo 2, ter cuidado com o peso, já que ele atrapalha a atuação da insulina. Temos uma série de dietas especiais e personalizadas para você aqui no nosso site, confira!</h4></p>
+
+  				<h3><li><b>Tome cuidado com álcool</b></li></h3>
+  				<p><h4>O álcool não é proibido se você for diabético, mas ele aumenta o nível de açúcar no sangue (apesar de também te dar o risco de ter hipoglicemia) e contém muitas calorias.</h4></p>
+
+  				<h3><li><b>Pratique exercícios</b></li></h3>
+  				<p><h4>Exercícios ajudam na atuação da insulina, além de reduzir massa corporal, aumentar a sensibilidade das células à insulina e elevar a capacidade dos músculos de reter glicose. Portanto, exercite-se! Confira as sugestões de exercícios do nosso site!</h4></p>
+  				<p><h4>Algumas dicas sobre exercícios:</h4></p>
+  				<ul>
+  					<li><h4>Consulte um médico antes de iniciar alguma atividade física;</h4></li>
+  					<li><h4>60 minutos de exercícios por no mínimo 3 vezes por semana são suficientes, mas, se você gostar de malhar, nada te impede de se exercitarna mesma frequência de alguém não diabético;</h4></li>
+  					<li><h4>Exercícios são contraindicados se seu nível glicêmico estiver <b>maior que 250</b>, pois pode causar um pico glicêmico, ou se estiver <b>menor que 70</b>, pois pode causar hipoglicemia! Tome cuidado!</h4></li>
+  					<li><h4>Exercícios intensificam a ação dos medicamentos que diminuem a glicemia, portanto, é recomendado que, sob rientação médica, esses remédios sejam tomados em doses <b>menores</b> nos dias de exercício;</h4></li>
+  					<li><h4>Coma uma <b>pequena</b> quantidade de carboidratos antes do exercício. É importante o consumo de carboidratos, também, depois do exercício para repor as energias gastas;</h4></li>
+  					<li><h4>Tantos exercícios aeróbicos quanto anaeróbicos são vantajosos para dibaéticos. Você já sabe a diferença entre eles? Mais embaixo ocê pode conferir.</h4></li>
+  				</ul>
+
+  				<h3><li><b>Tome cuidado com a visão</b></li></h3>
+  				<p><h4>O excesso prolongado de açúcar no sangue faz com que os vasos sanguíneos dos olhos absorvam mais líquido, deixando-os inchados, e podem causar um <b>edema macular</b>. É importante que você visite o oftalmologista regularmente, mesmo sem sintomas aparentes!</h4></p>
+  			</ul>
+
+  			<hr/>
+
+  			<p><h3>Se você é <b>hipertenso</b>, é importante que você:</h3></p>
+  			<ul>
+	  			<h3><li><b>Beba bastante líquido</b></li></h3>
+	  				<p><h4>Além de água, sucos e água de coco são recomendados.</h4></p>
+	  			<h3><li><b>Controle o estresse</b></li></h3>
+	  				<p><h4>Caminhadas de meia hora é uma boa forma de ajudar no controle do estresse.</h4></p>
+	  			<h3><li><b>Faça dietas sob orientação médica</b></li></h3>
+	  				<p><h4>Disponibilizamos para você algumas dietas especiais para hipertensão, mas nunca se esqueça de que é essencial consultar um médico antes de começar qualquer tipo de dieta!</h4></p>
+	  				<p><h4>Alguns alimentos liberados são:</h4></p>
+	  				<ul>
+	  					<li><h4>Queijo minas;</h4></li>
+	  					<li><h4>Peito de peru;</h4></li>
+	  					<li><h4>Ricota;</h4></li>
+	  					<li><h4>Castanhas;</h4></li>
+	  					<li><h4>Frutas como mlenaica, melão, pera, maçã, tangerina e abacaxi;</h4></li>
+	  					<li><h4>Temperos como alhos, ceboinha e salsa.</h4></li>
+	  				</ul>
+	  			<h3><li><b>Pratique exercícios</b></li></h3>
+	  				<p>O mesma dica para dietas vale para exercícios físicos, também. Confira as sugestões aqui no site, e lembre-se de consultar um médico antes de decidir praticar atividades.</p>
+  			</ul>
+
+  			<hr/>
+
+  			<h1><b>Você sabe a diferença entre exercícios aeróbicos e anaeróbicos?</b></h1>
+  			<p><h4 class="exe">Exercícios <b>aeróbicos</b> usam oxigênio, e geram energia para os músculos, fortalecendo-os. São realizados em <b>período contínuo</b> e em um <b>nível de intensidade determinado</b>. Já os <b>anaeróbicos</b> utilizam uma forma de energia que não depende do oxigênio, e são realizados em um <b>período curto</b> e com <b>grande intensidade</b>.</h4></p>
+
+  			<h1><b>Qual escolher?</b></h1>
+  			<p><h4>Depende dos seus objetivos.</h4></p>
+  			<p><h4 id="exe">Exercícios <b>aeróbicos</b>:</h4></p>
+  			<ul>
+  				<h4><li>Melhoram o metabolismo;</li></h4>
+  				<h4><li>Melhoram a circulação sanguínea;</li></h4>
+  				<h4><li>Controlam a pressão arterial;</li></h4>
+  				<h4><li>Aumentam a disposição para o dia a dia;</li></h4>
+  				<h4><li>Fortalecem o coração e o sistema respiraatório;</li></h4>
+  				<h4><li>Diminuem e combatem sintomas de <b>ansiedade</b> e <b>depressão</b>;</li></h4>
+  				<h4><li>Diminuem fadiga muscular;</li></h4>
+  				<h4><li>Controlam o colesterol;</li></h4>
+  				<h4><li>Fortalecem o sistema imunológico;</li></h4>
+  				<h4><li>Reduzem o risco de aparecimento e desenvolvimento de doenças como <b>câncer</b>, <b>obesidade</b> e <b>doenças cardíacas</b>;</li></h4>
+  				<h4><li>Aumentam a capacidade de recuperação;</li></h4>
+  			</ul>
+
+  			<p><h4 id="exe">Exercícios <b>anaeróbicos</b>:</h4></p>
+  			<ul>
+  				<h4><li>Previnem doenças como <b>artrite</b> e <b>dores lombares</b>;</li></h4>
+  				<h4><li>Conservam e fazem ganhar massa muscular;</li></h4>
+  				<h4><li>Controlam a pressão arterial;</li></h4>
+  				<h4><li>Fortalecem os ossos, evitando e combatendo a <b>osteoporose</b>;</li></h4>
+  				<h4><li>Aceleram o metabolismo devido ao ganho de massa magra;</li></h4>
+  				<h4><li>Tonificação do corpo, se aliados a uma alimentação equilibrada</b> e <b>depressão</b>;</li></h4>
+  			</ul>
+
+  			<p> <h4 class="exe" id="exe">De acordo com seus objetivos, escolha qual desses tipos de atividades são a melhor opção para você, e não esqueça de conferir os exercícios aqui no site!</h4></p>
+			<!-- FIM DAS INFORMACOES -->
+		</div>
+		<div id="final"></div>
+	</body>
+</html>
